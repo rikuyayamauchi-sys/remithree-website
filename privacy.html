@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー | Remi Three</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header scrolled" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/img/logo-white.png" alt="Remi Three" class="logo-img">
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html#home" class="nav-link">HOME</a>
+        <a href="index.html#company" class="nav-link">COMPANY</a>
+        <a href="index.html#about" class="nav-link">ABOUT US</a>
+        <a href="index.html#service" class="nav-link">SERVICE</a>
+        <a href="index.html#contact" class="nav-link nav-link--cta">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="privacy-page">
+    <div class="container">
+      <h1 class="privacy-title">プライバシーポリシー</h1>
+
+      <div class="privacy-content">
+        <p>合同会社Remi Three（以下「当社」）は、お客様の個人情報の保護を重要な責務と認識し、以下のとおりプライバシーポリシーを定め、個人情報の保護に努めます。</p>
+
+        <h2>1. 個人情報の定義</h2>
+        <p>個人情報とは、氏名、住所、電話番号、メールアドレスなど特定の個人を識別できる情報を指します。</p>
+
+        <h2>2. 個人情報の収集</h2>
+        <p>当社は、お問い合わせフォーム等を通じて、お客様の個人情報を適法かつ公正な手段により収集いたします。</p>
+
+        <h2>3. 個人情報の利用目的</h2>
+        <p>当社が収集した個人情報は、以下の目的で利用いたします。</p>
+        <ul>
+          <li>お問い合わせへの対応</li>
+          <li>サービスの提供・改善</li>
+          <li>当社からのご連絡・ご案内</li>
+          <li>契約の履行</li>
+        </ul>
+
+        <h2>4. 個人情報の第三者提供</h2>
+        <p>当社は、法令に基づく場合を除き、お客様の同意なく個人情報を第三者に提供いたしません。</p>
+
+        <h2>5. 個人情報の管理</h2>
+        <p>当社は、お客様の個人情報を正確かつ最新の状態に保ち、不正アクセス・紛失・破損・改ざん・漏洩などを防止するため、セキュリティの維持・管理体制の整備等、必要な措置を講じます。</p>
+
+        <h2>6. 個人情報の開示・訂正・削除</h2>
+        <p>お客様が個人情報の開示・訂正・削除を希望される場合は、当社までご連絡ください。合理的な範囲で速やかに対応いたします。</p>
+
+        <h2>7. プライバシーポリシーの変更</h2>
+        <p>当社は、必要に応じて本ポリシーを変更することがあります。変更後のプライバシーポリシーは、本ページに掲載した時点から効力を生じるものとします。</p>
+
+        <h2>8. お問い合わせ</h2>
+        <p>個人情報の取り扱いに関するお問い合わせは、下記までご連絡ください。</p>
+        <p>
+          合同会社Remi Three<br>
+          メール：<a href="mailto:info@remithree.com">info@remithree.com</a>
+        </p>
+
+        <p class="privacy-date">制定日：2024年6月1日</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <img src="assets/img/logo-white.png" alt="Remi Three" class="footer-logo">
+        <nav class="footer-nav">
+          <a href="index.html#home">HOME</a>
+          <a href="index.html#company">COMPANY</a>
+          <a href="index.html#about">ABOUT US</a>
+          <a href="index.html#service">SERVICE</a>
+          <a href="index.html#contact">CONTACT</a>
+          <a href="privacy.html">プライバシーポリシー</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Remi Three .LLC. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('nav').classList.toggle('open');
+      document.getElementById('hamburger').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
