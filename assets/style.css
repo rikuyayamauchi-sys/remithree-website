@@ -97,6 +97,11 @@ a { color: inherit; text-decoration: none; }
   background: rgba(255,255,255,0.12);
 }
 
+.nav-link.active {
+  background: rgba(255,255,255,0.2);
+  color: var(--white);
+}
+
 .nav-link--cta {
   background: var(--accent);
   color: var(--white);
@@ -189,6 +194,23 @@ a { color: inherit; text-decoration: none; }
   background: var(--white);
   color: var(--navy);
   border-color: var(--white);
+}
+
+/* Hero Page Variant */
+.hero--page {
+  height: 50vh;
+  min-height: 300px;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+}
+
+.hero--page .hero-title {
+  font-size: clamp(28px, 4vw, 40px);
+  margin-bottom: 16px;
+}
+
+.hero--page .hero-sub {
+  font-size: 16px;
+  margin-bottom: 0;
 }
 
 /* ===== Section Common ===== */
