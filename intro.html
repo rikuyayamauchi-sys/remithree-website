@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>合同会社Remi Three 会社説明資料</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* 基本設定: コンサルティングファームのような洗練されたスタイル */
+        * { box-sizing: border-box; }
+        body {
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 20px 0;
+            display: grid;
+            gap: 20px;
+            place-items: center;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #fff;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            padding: 60px 80px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* 背景デザイン: ネイビーのアクセントと幾何学模様 */
+        .slide-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, rgba(29, 53, 87, 0.05) 0%, transparent 100%);
+            border-radius: 0 0 0 100%;
+            z-index: 0;
+        }
+
+        .slide-container::after {
+            content: '';
+            position: absolute;
+            bottom: 20px;
+            left: 80px;
+            width: 40px;
+            height: 4px;
+            background-color: #FFEB3B; /* ロゴのイエロー */
+            z-index: 1;
+        }
+
+        /* タイトル・テキストスタイル */
+        h1, h2, h3, h4 { 
+            margin: 0; 
+            color: #1d3557; /* ネイビー */
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+
+        .slide-title {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 35px;
+            border-left: 8px solid #1d3557;
+            padding-left: 20px;
+            line-height: 1.2;
+            text-align: left;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .slide-title .subtitle {
+            font-size: 16px;
+            color: #64748b;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+        }
+
+        p, li { 
+            font-size: 18px; 
+            color: #475569; 
+            line-height: 1.6;
+        }
+
+        .content-area {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            z-index: 1;
+        }
+
+        /* レイアウト: 2カラム */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* タイル・アイコンスタイル */
+        .tiled-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            width: 100%;
+        }
+        .tile {
+            background-color: #f8fafc;
+            padding: 35px 30px;
+            border-radius: 16px;
+            border-top: 6px solid #1d3557;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .tile i {
+            font-size: 44px;
+            color: #1d3557;
+            margin-bottom: 20px;
+        }
+        .tile h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .tile p {
+            font-size: 15px;
+            text-align: left;
+        }
+
+        /* 特殊レイアウト: タイトルスライド */
+        .title-slide {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #1d3557;
+            color: #fff;
+        }
+        .title-slide h1 { color: #fff; font-size: 72px; margin-bottom: 20px; font-weight: 700; letter-spacing: 0.05em; }
+        .title-slide p { color: #e2e8f0; font-size: 26px; }
+        .title-slide .logo-accent {
+            width: 120px;
+            height: 8px;
+            background-color: #FFEB3B;
+            margin: 40px auto;
+        }
+
+        /* テーブルスタイル */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th {
+            background-color: #1d3557;
+            color: #fff;
+            padding: 16px;
+            text-align: left;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        td {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 17px;
+        }
+
+        /* 箇条書きスタイル */
+        .bullet-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .bullet-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .bullet-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #1d3557;
+        }
+
+        /* 実績アピール用カードスタイル */
+        .metric-card {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 30px;
+            border-left: 6px solid #1d3557;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+        .metric-card h4 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #1d3557;
+            font-weight: 700;
+        }
+        .metric-flex {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .metric-num {
+            font-size: 56px;
+            font-weight: 800;
+            color: #1d3557;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1;
+        }
+        .metric-unit {
+            font-size: 20px;
+            font-weight: 700;
+            color: #475569;
+        }
+        .metric-arrow {
+            font-size: 32px;
+            color: #64748b;
+            margin: 0 10px;
+        }
+
+        /* 2段組み実績レイアウト */
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Slide 1: Title_Slide -->
+<div class="slide-container title-slide" id="slide1">
+    <h1>Remi Three</h1>
+    <div class="logo-accent"></div>
+    <p>Company Overview / 会社説明資料</p>
+    <p style="font-size: 18px; margin-top: 60px; opacity: 0.8;">合同会社Remi Three</p>
+</div>
+
+<!-- Slide 2: Section_Title - Business Philosophy -->
+<div class="slide-container" id="slide2">
+    <div class="content-area" style="text-align: center;">
+        <h2 style="font-size: 60px; margin-bottom: 30px; line-height: 1.3;">人・組織・事業の<br><span style="color: #1d3557;">成長を最大化する</span></h2>
+        <p style="max-width: 800px; margin: 0 auto; font-size: 24px; line-height: 1.8;">採用から組織構築、営業戦略まで。<br>一貫した支援で企業の「次の一歩」を創り出します。</p>
+    </div>
+</div>
+
+<!-- Slide 3: Tiled_Text_With_Icons - Core Services -->
+<div class="slide-container" id="slide3">
+    <h2 class="slide-title">事業内容<span class="subtitle">OUR SERVICES</span></h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <i class="fa-solid fa-users-gear"></i>
+                <h3>採用コンサルティング</h3>
+                <p>採用戦略の設計から、母集団形成、オペレーション構築、実務の実行支援（RPO）まで、一気通貫で企業の採用力を底上げします。</p>
+            </div>
+            <div class="tile">
+                <i class="fa-solid fa-diagram-project"></i>
+                <h3>人事コンサルティング</h3>
+                <p>従業員のES（満足度）向上施策の考案・実行や、企業ステージに応じた人事評価制度の設計・運用・ブラッシュアップを担います。</p>
+            </div>
+            <div class="tile">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>営業・組織構築支援</h3>
+                <p>人材紹介事業をはじめとする新規事業の立ち上げ、営業戦略・CS（カスタマーサクセス）戦略の立案から体制構築まで支援します。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 4: Achievement - Recruitment Consulting -->
+<div class="slide-container" id="slide4">
+    <h2 class="slide-title">実績：採用コンサルティング<span class="subtitle">RECRUITING CASE STUDY</span></h2>
+    <div class="content-area">
+        <div class="achievement-grid">
+            <!-- Case 1: ヘイフィールド様 -->
+            <div class="metric-card">
+                <h4>株式会社ヘイフィールド 様</h4>
+                <div class="metric-flex">
+                    <span class="metric-num">8</span><span class="metric-unit">名</span>
+                    <span class="metric-arrow">→</span>
+                    <span class="metric-num" style="color: #FFEB3B; -webkit-text-stroke: 1px #1d3557; text-shadow: 1px 1px 0 #1d3557;">90</span><span class="metric-unit">名規模へ</span>
+                </div>
+                <p style="font-size: 15px; margin: 0;">組織が急拡大する過渡期において、コアメンバーから現場スタッフまで幅広く採用を継続支援。急成長の基盤となる組織拡大を圧倒的なスピード感で推進しました。</p>
+            </div>
+
+            <!-- Case 2: Airz様 -->
+            <div class="metric-card">
+                <h4>株式会社Airz 様</h4>
+                <div class="metric-flex">
+                    <span class="metric-num">3</span><span class="metric-unit">名</span>
+                    <span class="metric-arrow">→</span>
+                    <span class="metric-num">10</span><span class="metric-unit">名規模へ</span>
+                </div>
+                <p style="font-size: 15px; margin: 0;">採用体制が「完全ゼロ」の状態から採用組織を立ち上げ。メンバークラスのみならず、今後の事業を牽引するマネージャークラスの採用まで幅広く設計・実行しました。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 5: Achievement - HR Consulting -->
+<div class="slide-container" id="slide5">
+    <h2 class="slide-title">実績：人事コンサルティング<span class="subtitle">HR CONSULTING CASE STUDY</span></h2>
+    <div class="content-area">
+        <div class="two-column" style="grid-template-columns: 1.1fr 0.9fr;">
+            <div>
+                <h3 style="font-size: 26px; margin-bottom: 25px; font-weight: 700;">急拡大期に生じる組織の歪みを解決する</h3>
+                <ul class="bullet-list">
+                    <li><strong>ベンチャー企業の評価制度構築：</strong><br>急拡大する組織フェーズに適応した「納得感のある評価制度」をゼロから構築。形骸化させない運用スキームまで設計。</li>
+                    <li style="margin-top: 15px;"><strong>50名から100名超えにおける人事制度改定：</strong><br>組織の成長に伴う階層化に対応するため、人事制度の根本的な見直しと改定を実施。持続可能な組織体制の確立に寄与。</li>
+                </ul>
+            </div>
+            <div style="background-color: #f8fafc; padding: 40px; border-radius: 16px; border-top: 6px solid #FFEB3B; text-align: center;">
+                <i class="fa-solid fa-users-viewfinder" style="font-size: 64px; color: #1d3557; margin-bottom: 20px;"></i>
+                <h4 style="font-size: 20px; margin-bottom: 10px; font-weight: 700;">制度構築から定着まで一貫支援</h4>
+                <p style="font-size: 15px; margin: 0; text-align: left;">ただ制度を作るだけでなく、社員への説明、評価者研修、期末評価のブラッシュアップなど、現場に深く入り込む運用フェーズを最も重要視しています。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 6: Achievement - Staffing Business Launch -->
+<div class="slide-container" id="slide6">
+    <h2 class="slide-title">実績：人材紹介事業の立ち上げ支援<span class="subtitle">BUSINESS LAUNCH CASE STUDY</span></h2>
+    <div class="content-area">
+        <div class="two-column" style="grid-template-columns: 40% 60%;">
+            <div style="text-align: center; background: #f8fafc; padding: 40px; border-radius: 16px; border-left: 6px solid #1d3557;">
+                <div class="number-label" style="font-size: 18px; margin-bottom: 10px;">売上実績（立ち上げ後）</div>
+                <div class="highlight-number" style="font-size: 72px; line-height: 1.1; color: #1d3557; font-family: 'Montserrat', sans-serif;">月商<span style="font-size: 80px; font-weight: 800; color: #1d3557;">600</span><span style="font-size: 24px; font-weight: 700;">万円〜</span></div>
+                <div class="number-label" style="font-size: 14px; margin-top: 10px; color: #64748b;">毎月コンスタントに維持</div>
+            </div>
+            <div style="padding-left: 20px;">
+                <h3 style="font-size: 24px; margin-bottom: 20px; font-weight: 700;">ゼロスタートから収益化までの軌道乗せ</h3>
+                <ul class="bullet-list">
+                    <li><strong>事業の立ち上げプロデュース：</strong><br>許認可取得後の立ち上げ期において、必要な業務フロー、KPIマネジメントの土台を構築。</li>
+                    <li style="margin-top: 15px;"><strong>営業・採用の統括管掌：</strong><br>RA（リクルーティングアドバイザー）営業戦略の立案・実行、および求職者集客体制を責任者としてリード。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 7: Highlighted_Numbers - Media Management Achievement -->
+<div class="slide-container" id="slide7">
+    <h2 class="slide-title">実績：求人サイト・メディア運営<span class="subtitle">MEDIA MANAGEMENT</span></h2>
+    <div class="content-area">
+        <div class="two-column" style="grid-template-columns: 40% 60%;">
+            <div style="text-align: center; background: #f8fafc; padding: 40px; border-radius: 16px; border-left: 6px solid #1d3557;">
+                <div class="number-label" style="font-size: 18px; margin-bottom: 10px;">年間売上実績</div>
+                <div class="highlight-number" style="font-size: 80px; line-height: 1.1; color: #1d3557; font-family: 'Montserrat', sans-serif;">1<span style="font-size: 40px;">億円</span></div>
+                <div class="number-label" style="font-size: 14px; margin-top: 10px; color: #64748b;">メディア全体統括</div>
+            </div>
+            <div style="padding-left: 20px;">
+                <h3 style="color: #1d3557; margin-bottom: 20px; font-weight: 700;">一気通貫のメディアマネジメント</h3>
+                <p style="font-size: 16px; margin-bottom: 20px;">特定の領域に特化した求人サイトにおいて、年間売上1億円規模の運営をリード。</p>
+                <ul class="bullet-list">
+                    <li><strong>営業戦略：</strong>新規求人企業の開拓および掲載プランの設計。</li>
+                    <li><strong>CS戦略：</strong>掲載企業の応募効果の最大化、掲載継続に向けたサポート。</li>
+                    <li><strong>サイト運営：</strong>効果的なサイト内UI/UX改善や集客体制の確立。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 8: Table - Representative Profile -->
+<div class="slide-container" id="slide8">
+    <h2 class="slide-title">代表略歴：山内 陸也<span class="subtitle">REPRESENTATIVE PROFILE</span></h2>
+    <div class="content-area">
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 250px;">在籍期間</th>
+                    <th>企業・内容</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2015.04 - 2019.09</td>
+                    <td><strong>株式会社マイナビ：</strong>求人広告の営業、採用支援、マネージャー業務。</td>
+                </tr>
+                <tr>
+                    <td>2019.10 - 2021.04</td>
+                    <td><strong>indeed japan株式会社：</strong>検索エンジン型求人広告の運用・採用支援。</td>
+                </tr>
+                <tr>
+                    <td>2020.10 - 現在</td>
+                    <td><strong>株式会社ヘイフィールド：</strong>採用人事（中途・インターン）、評価制度運用。</td>
+                </tr>
+                <tr>
+                    <td>2021.04 - 現在</td>
+                    <td><strong>株式会社Airz：</strong>新規事業推進、マーケティング、営業、採用。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Slide 9: Tiled_Text_With_Icons - Strengths -->
+<div class="slide-container" id="slide9">
+    <h2 class="slide-title">Remi Threeの強み<span class="subtitle">OUR STRENGTHS</span></h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                <h3>データに基づいた戦略</h3>
+                <p>indeed等での運用知見を活かし、感覚に頼らない論理的なターゲットアプローチと採用チャネル最適化を提案。</p>
+            </div>
+            <div class="tile">
+                <i class="fa-solid fa-hands-holding-circle"></i>
+                <h3>当事者意識の伴走力</h3>
+                <p>外部コンサルタントとしての助言に留まらず、企業の「中の人」として実務推進（RPO）を泥臭く徹底実行。</p>
+            </div>
+            <div class="tile">
+                <i class="fa-solid fa-arrows-to-dot"></i>
+                <h3>事業全体を捉える視点</h3>
+                <p>採用のみならず、営業・CS・制度設計まで事業フェーズを一貫して理解しているため、ブレのない組織設計が可能。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 10: Section_Title - Future Vision -->
+<div class="slide-container" id="slide10">
+    <div class="content-area" style="text-align: center;">
+        <h2 style="font-size: 50px; margin-bottom: 20px; line-height: 1.3;">貴社の採用・組織の「正解」を<br>共に創ります。</h2>
+        <p style="font-size: 24px; color: #475569;">まずはお気軽にご相談ください。</p>
+    </div>
+</div>
+
+<!-- Slide 11: Full_Background_Image - Corporate Message -->
+<div class="slide-container" id="slide11" style="background-image: linear-gradient(rgba(29, 53, 87, 0.9), rgba(29, 53, 87, 0.9)), url('http://googleusercontent.com/image_collection/image_retrieval/7422871403394917845'); background-size: cover; background-position: center; color: #fff; text-align: center; justify-content: center; align-items: center;">
+    <h2 style="color: #fff; font-size: 64px; margin-bottom: 30px; font-weight: 700; letter-spacing: 0.05em;">Growing Together</h2>
+    <p style="color: #FFEB3B; font-size: 32px; font-weight: 700;">合同会社Remi Three</p>
+</div>
+
+<!-- Slide 12: Q&A / Contact -->
+<div class="slide-container" id="slide12">
+    <div class="content-area" style="text-align: center;">
+        <h2 style="font-size: 60px; margin-bottom: 40px; font-weight: 700; letter-spacing: 0.05em; color: #1d3557;">Contact</h2>
+        <p style="font-size: 28px; margin-bottom: 15px; font-weight: 700;">山内 陸也 / Rikuya Yamauchi</p>
+        <p style="font-size: 22px; color: #475569; margin-bottom: 5px;">TEL: 090-7076-0251</p>
+        <p style="font-size: 22px; color: #475569; margin-bottom: 40px;">Email: rikuya.yamauchi@remithree.com</p>
+        <p style="font-size: 22px; margin-top: 40px; font-family: 'Montserrat', sans-serif; font-weight: 700; color: #1d3557;">
+            <a href="https://remithree.com/" target="_blank" style="color: #1d3557; text-decoration: none; border-bottom: 2px solid #FFEB3B; padding-bottom: 4px;">https://remithree.com/</a>
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
