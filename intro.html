@@ -258,6 +258,45 @@
   .contact-rows .v { font-weight: 700; }
   .contact-rows a { color: inherit; text-decoration: none; border-bottom: 2px solid var(--yellow); padding-bottom: 2px; }
 
+  /* キマルマデ 概要スライド（ダーク） */
+  .km-deck-logo { height: 50px; width: auto; margin-bottom: 22px; align-self: flex-start; }
+  .km-deck-lead {
+    font-size: 16px; font-weight: 500; line-height: 2.05;
+    max-width: 52em; margin-bottom: 28px;
+    color: rgba(255,255,255,0.9);
+  }
+  .km-deck-lead strong { color: var(--yellow); font-weight: 900; }
+  .offer-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .offer-point { border: 1px solid var(--line-dark); padding: 24px 22px; text-align: center; }
+  .offer-ico { width: 40px; height: 40px; margin: 0 auto 14px; color: var(--yellow); }
+  .offer-ico svg { width: 100%; height: 100%; }
+  .offer-point .t { font-size: 17px; font-weight: 700; color: var(--yellow); margin-bottom: 8px; }
+  .offer-point .d { font-size: 13px; line-height: 1.85; color: rgba(255,255,255,0.85); }
+  .note-line {
+    font-size: 11.5px; color: var(--muted); line-height: 1.85;
+    border-left: 2px solid var(--yellow); padding-left: 12px; margin-top: auto;
+  }
+  .dark .note-line { color: rgba(255,255,255,0.65); }
+
+  /* キマルマデ 実績テーブル */
+  .results-lead { font-size: 15px; font-weight: 700; margin-bottom: 20px; }
+  .results-lead em { font-style: normal; background: linear-gradient(transparent 64%, var(--yellow) 64%, var(--yellow) 94%, transparent 94%); }
+  table.results-table { width: 100%; border-collapse: collapse; background: var(--white); border: 1px solid var(--line); }
+  .results-table th, .results-table td { padding: 13px 22px; font-size: 15px; border-bottom: 1px solid var(--line); text-align: left; line-height: 1.6; }
+  .results-table th { background: var(--ink); color: var(--white); font-weight: 500; letter-spacing: 0.04em; white-space: nowrap; }
+  .results-table td.area {
+    font-weight: 700; white-space: nowrap; width: 110px;
+    position: relative; padding-left: 40px;
+  }
+  .results-table td.area::before {
+    content: ''; position: absolute; left: 22px; top: 50%;
+    transform: translateY(-50%);
+    width: 9px; height: 9px;
+    background: var(--yellow);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+  }
+  .results-table td.fee { font-weight: 700; white-space: nowrap; }
+
   /* サイトへ戻る（画面閲覧時のみ） */
   .deck-back {
     position: fixed; top: 20px; right: 24px; z-index: 50;
@@ -339,11 +378,72 @@
   <div class="s-foot"><img src="assets/img/logo.png" alt="Remi Three"><span class="pg">03</span></div>
 </section>
 
-<!-- 4. 実績：採用コンサルティング -->
+<!-- 4. キマルマデ 概要 -->
+<section class="slide dark">
+  <div class="slide-body">
+    <div class="s-head">
+      <p class="s-meta"><span class="n">(03)</span><span>KIMARUMADE</span></p>
+      <h2>採用支援事業「キマルマデ」</h2>
+      <span class="s-ghost">KIMARUMADE</span>
+    </div>
+    <img src="assets/img/kimarumade-logo-white.png" alt="キマルマデ" class="km-deck-logo">
+    <p class="km-deck-lead">
+      地方企業専門の完全成果報酬型 採用代行。indeed・求人ボックス等での集客から、書類選考、面接の日程調整まで弊社がすべて実施し、企業様は面接をするだけ。<strong>採用が決まるまで、費用0円。</strong>
+    </p>
+    <div class="offer-points">
+      <div class="offer-point">
+        <div class="offer-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg></div>
+        <p class="t">初期費用 0円</p>
+        <p class="d">契約金・着手金は一切不要。リスクなく始められます。</p>
+      </div>
+      <div class="offer-point">
+        <div class="offer-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <p class="t">月額固定費 0円</p>
+        <p class="d">採用コンサル・採用代行・広告運用の手数料はすべて無料。</p>
+      </div>
+      <div class="offer-point">
+        <div class="offer-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+        <p class="t">完全成果報酬</p>
+        <p class="d">入社が決まった時点で、職種別の成果報酬のみ頂戴します。</p>
+      </div>
+    </div>
+    <p class="note-line">※ 応募者集客のための広告費（月1万円〜5万円程度・媒体への実費）のみ企業様にご負担いただきます。詳細は https://remithree.com/rpo/ をご覧ください。</p>
+  </div>
+  <div class="s-foot"><img src="assets/img/logo-white.png" alt="Remi Three"><span class="pg">04</span></div>
+</section>
+
+<!-- 5. キマルマデ 実績 -->
 <section class="slide">
   <div class="slide-body">
     <div class="s-head">
-      <p class="s-meta"><span class="n">(03)</span><span>RECRUITING CASE STUDY</span></p>
+      <p class="s-meta"><span class="n">(04)</span><span>KIMARUMADE RESULTS</span></p>
+      <h2>キマルマデ 採用成功実績</h2>
+      <span class="s-ghost">RESULTS</span>
+    </div>
+    <p class="results-lead">仙台・郡山エリアを中心に、<em>事務からドライバー、看護師まで</em>幅広い職種で採用が決まっています。</p>
+    <table class="results-table">
+      <thead>
+        <tr><th>エリア</th><th>業種</th><th>採用職種・人数</th><th>成果報酬（1名あたり・税別）</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="area">仙台</td><td>税理士法人</td><td>事務 1名</td><td class="fee">30万円</td></tr>
+        <tr><td class="area">仙台</td><td>太陽光（訪問営業）</td><td>営業 2名</td><td class="fee">80万円</td></tr>
+        <tr><td class="area">仙台</td><td>携帯販売</td><td>販売スタッフ 3名</td><td class="fee">50万円</td></tr>
+        <tr><td class="area">仙台</td><td>美容クリニック</td><td>受付 / 看護師</td><td class="fee">受付 30万円 / 看護師 50万円</td></tr>
+        <tr><td class="area">郡山</td><td>軽貨物運送</td><td>ドライバー</td><td class="fee">30万円</td></tr>
+        <tr><td class="area">郡山</td><td>飲食</td><td>店長</td><td class="fee">50万円</td></tr>
+      </tbody>
+    </table>
+    <p class="note-line">※ 成果報酬は各案件の契約時の職種別単価です。募集職種・要件により変動します。</p>
+  </div>
+  <div class="s-foot"><img src="assets/img/logo.png" alt="Remi Three"><span class="pg">05</span></div>
+</section>
+
+<!-- 6. 実績：採用コンサルティング -->
+<section class="slide">
+  <div class="slide-body">
+    <div class="s-head">
+      <p class="s-meta"><span class="n">(05)</span><span>RECRUITING CASE STUDY</span></p>
       <h2>実績：採用コンサルティング</h2>
       <span class="s-ghost">RESULTS</span>
     </div>
@@ -368,14 +468,14 @@
       </div>
     </div>
   </div>
-  <div class="s-foot"><img src="assets/img/logo.png" alt="Remi Three"><span class="pg">04</span></div>
+  <div class="s-foot"><img src="assets/img/logo.png" alt="Remi Three"><span class="pg">06</span></div>
 </section>
 
 <!-- 5. 実績：人事コンサルティング -->
 <section class="slide">
   <div class="slide-body">
     <div class="s-head">
-      <p class="s-meta"><span class="n">(04)</span><span>HR CONSULTING CASE STUDY</span></p>
+      <p class="s-meta"><span class="n">(06)</span><span>HR CONSULTING CASE STUDY</span></p>
       <h2>実績：人事コンサルティング</h2>
       <span class="s-ghost">RESULTS</span>
     </div>
@@ -393,14 +493,14 @@
       </div>
     </div>
   </div>
-  <div class="s-foot"><img src="assets/img/logo.png" alt="Remi Three"><span class="pg">05</span></div>
+  <div class="s-foot"><img src="assets/img/logo.png" alt="Remi Three"><span class="pg">07</span></div>
 </section>
 
 <!-- 6. 実績：人材紹介事業の立ち上げ -->
 <section class="slide">
   <div class="slide-body">
     <div class="s-head">
-      <p class="s-meta"><span class="n">(05)</span><span>BUSINESS LAUNCH CASE STUDY</span></p>
+      <p class="s-meta"><span class="n">(07)</span><span>BUSINESS LAUNCH CASE STUDY</span></p>
       <h2>実績：人材紹介事業の立ち上げ支援</h2>
       <span class="s-ghost">LAUNCH</span>
     </div>
@@ -419,14 +519,14 @@
       </div>
     </div>
   </div>
-  <div class="s-foot"><img src="assets/img/logo.png" alt="Remi Three"><span class="pg">06</span></div>
+  <div class="s-foot"><img src="assets/img/logo.png" alt="Remi Three"><span class="pg">08</span></div>
 </section>
 
 <!-- 7. 実績：求人サイト・メディア運営 -->
 <section class="slide">
   <div class="slide-body">
     <div class="s-head">
-      <p class="s-meta"><span class="n">(06)</span><span>MEDIA MANAGEMENT</span></p>
+      <p class="s-meta"><span class="n">(08)</span><span>MEDIA MANAGEMENT</span></p>
       <h2>実績：求人サイト・メディア運営</h2>
       <span class="s-ghost">MEDIA</span>
     </div>
@@ -447,14 +547,14 @@
       </div>
     </div>
   </div>
-  <div class="s-foot"><img src="assets/img/logo.png" alt="Remi Three"><span class="pg">07</span></div>
+  <div class="s-foot"><img src="assets/img/logo.png" alt="Remi Three"><span class="pg">09</span></div>
 </section>
 
 <!-- 8. 代表略歴 -->
 <section class="slide">
   <div class="slide-body">
     <div class="s-head">
-      <p class="s-meta"><span class="n">(07)</span><span>REPRESENTATIVE PROFILE</span></p>
+      <p class="s-meta"><span class="n">(09)</span><span>REPRESENTATIVE PROFILE</span></p>
       <h2>代表略歴：山内 陸也</h2>
       <span class="s-ghost">PROFILE</span>
     </div>
@@ -485,14 +585,14 @@
       </tbody>
     </table>
   </div>
-  <div class="s-foot"><img src="assets/img/logo.png" alt="Remi Three"><span class="pg">08</span></div>
+  <div class="s-foot"><img src="assets/img/logo.png" alt="Remi Three"><span class="pg">10</span></div>
 </section>
 
 <!-- 9. 強み -->
 <section class="slide">
   <div class="slide-body">
     <div class="s-head">
-      <p class="s-meta"><span class="n">(08)</span><span>OUR STRENGTHS</span></p>
+      <p class="s-meta"><span class="n">(10)</span><span>OUR STRENGTHS</span></p>
       <h2>Remi Threeの強み</h2>
       <span class="s-ghost">STRENGTH</span>
     </div>
@@ -514,17 +614,17 @@
       </div>
     </div>
   </div>
-  <div class="s-foot"><img src="assets/img/logo.png" alt="Remi Three"><span class="pg">09</span></div>
+  <div class="s-foot"><img src="assets/img/logo.png" alt="Remi Three"><span class="pg">11</span></div>
 </section>
 
 <!-- 10. メッセージ -->
 <section class="slide statement">
   <div class="slide-body">
-    <p class="s-meta" style="margin-bottom:26px;"><span class="n">(09)</span><span>MESSAGE</span></p>
+    <p class="s-meta" style="margin-bottom:26px;"><span class="n">(11)</span><span>MESSAGE</span></p>
     <h2>貴社の採用・組織の<em>「正解」</em>を<br>共に創ります。</h2>
     <p>まずはお気軽にご相談ください。</p>
   </div>
-  <div class="s-foot"><img src="assets/img/logo.png" alt="Remi Three"><span class="pg">10</span></div>
+  <div class="s-foot"><img src="assets/img/logo.png" alt="Remi Three"><span class="pg">12</span></div>
 </section>
 
 <!-- 11. ブランドステートメント -->
@@ -556,7 +656,7 @@
       <div class="row"><span class="k">WEB</span><span class="v"><a href="https://remithree.com/" target="_blank">https://remithree.com/</a></span></div>
     </div>
   </div>
-  <div class="s-foot"><img src="assets/img/logo.png" alt="Remi Three"><span class="pg">12</span></div>
+  <div class="s-foot"><img src="assets/img/logo.png" alt="Remi Three"><span class="pg">14</span></div>
 </section>
 
 </body>

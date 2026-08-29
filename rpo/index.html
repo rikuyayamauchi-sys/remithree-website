@@ -30,6 +30,19 @@
       transition: var(--tr);
     }
     .lp-head-cta:hover { background: var(--yellow); color: var(--ink); }
+    .lp-head-nav { display: flex; align-items: center; gap: 24px; }
+    .lp-head-link {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      border-bottom: 2px solid var(--yellow);
+      padding-bottom: 3px;
+      transition: opacity var(--tr);
+    }
+    .lp-head-link:hover { opacity: 0.6; }
+    @media (max-width: 480px) {
+      .lp-head-link { display: none; } /* モバイルはフッターから遷移 */
+    }
 
     /* Hero */
     .lp-hero {
@@ -108,10 +121,10 @@
 
     .lp-hero-visual {
       position: absolute;
-      right: -6%;
+      right: 5vw;
       top: 50%;
       transform: translateY(-50%);
-      width: min(40vw, 500px);
+      width: min(34vw, 460px);
       z-index: 1;
       pointer-events: none;
     }
@@ -432,7 +445,10 @@
       <a href="../index.html" class="logo">
         <img src="../assets/img/logo.png" alt="Remi Three" class="logo-img">
       </a>
-      <a href="#contact" class="lp-head-cta">無料相談はこちら</a>
+      <div class="lp-head-nav">
+        <a href="../index.html" class="lp-head-link">会社HP</a>
+        <a href="#contact" class="lp-head-cta">無料相談はこちら</a>
+      </div>
     </div>
   </header>
 
