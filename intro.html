@@ -257,9 +257,24 @@
   }
   .contact-rows .v { font-weight: 700; }
   .contact-rows a { color: inherit; text-decoration: none; border-bottom: 2px solid var(--yellow); padding-bottom: 2px; }
+
+  /* サイトへ戻る（画面閲覧時のみ） */
+  .deck-back {
+    position: fixed; top: 20px; right: 24px; z-index: 50;
+    background: var(--ink); color: var(--white);
+    font-family: var(--en); font-size: 12px; font-weight: 500;
+    letter-spacing: 0.1em;
+    padding: 11px 20px; border-radius: 2px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+  }
+  .deck-back:hover { background: var(--yellow); color: var(--ink); }
+  @media print { .deck-back { display: none; } }
 </style>
 </head>
 <body>
+
+<a href="index.html" class="deck-back">&larr; REMITHREE.COM</a>
 
 <!-- 1. 表紙 -->
 <section class="slide cover">
@@ -334,7 +349,7 @@
     </div>
     <div class="metric-row">
       <div class="metric-card">
-        <h4>株式会社ヘイフィールド 様</h4>
+        <h4>人材紹介スタートアップ企業 様</h4>
         <div class="metric-flex">
           <span class="metric-num">8</span><span class="metric-unit">名</span>
           <span class="metric-arrow">&rarr;</span>
@@ -343,7 +358,7 @@
         <p>組織が急拡大する過渡期において、コアメンバーから現場スタッフまで幅広く採用を継続支援。急成長の基盤となる組織拡大を圧倒的なスピード感で推進しました。</p>
       </div>
       <div class="metric-card">
-        <h4>株式会社Airz 様</h4>
+        <h4>WEBマーケティングコンサル企業 様</h4>
         <div class="metric-flex">
           <span class="metric-num">3</span><span class="metric-unit">名</span>
           <span class="metric-arrow">&rarr;</span>
@@ -461,11 +476,11 @@
         </tr>
         <tr>
           <td>2020.10 - 現在</td>
-          <td><strong>株式会社ヘイフィールド</strong>：採用人事（中途・インターン）、評価制度運用。</td>
+          <td><strong>人材紹介スタートアップ企業</strong>：採用人事（中途・インターン）、評価制度運用。</td>
         </tr>
         <tr>
           <td>2021.04 - 現在</td>
-          <td><strong>株式会社Airz</strong>：新規事業推進、マーケティング、営業、採用。</td>
+          <td><strong>WEBマーケティングコンサル企業</strong>：新規事業推進、マーケティング、営業、採用。</td>
         </tr>
       </tbody>
     </table>
