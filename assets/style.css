@@ -465,24 +465,22 @@ em.hl {
   height: 150px;
 }
 
+.km-topline {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+  padding-right: 110px; /* 右上の角折り装飾と重ならないように */
+}
+
 .km-num {
   font-family: var(--en);
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.2em;
   color: var(--yellow);
-  margin-bottom: 22px;
 }
-
-.km-feature-head {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
-  margin-bottom: 26px;
-}
-
-.km-feature-head img { height: 44px; }
 
 .km-tag {
   display: inline-block;
@@ -495,11 +493,42 @@ em.hl {
   border-radius: 2px;
 }
 
-.km-feature h3 {
-  font-size: 24px;
-  font-weight: 900;
-  letter-spacing: 0.04em;
-  margin-bottom: 14px;
+.km-cat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 20px;
+}
+
+.km-cat::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: var(--yellow);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.km-logo-main {
+  height: 60px;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+.km-lead {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+
+.km-lead .km-lead-em {
+  font-style: normal;
+  color: var(--yellow);
 }
 
 .km-feature .km-desc {
@@ -1226,7 +1255,9 @@ em.hl {
 
   .km-feature { padding: 36px 26px; }
   .km-feature ul { grid-template-columns: 1fr; }
-  .km-feature h3 { font-size: 20px; }
+  .km-topline { margin-bottom: 22px; }
+  .km-logo-main { height: 44px; }
+  .km-lead { font-size: 15px; }
   .km-feature::before { width: 72px; height: 72px; }
   .km-btn { display: flex; justify-content: center; }
 
