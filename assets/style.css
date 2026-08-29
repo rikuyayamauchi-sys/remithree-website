@@ -442,7 +442,7 @@ em.hl {
   position: relative;
   background: var(--ink-deep);
   color: var(--white);
-  padding: 56px 56px 52px;
+  padding: 46px 52px 46px;
   overflow: hidden;
   transition: var(--tr);
   border: 1px solid var(--ink-deep);
@@ -465,13 +465,17 @@ em.hl {
   height: 150px;
 }
 
+/* キマルマデ紹介：ロゴ見出しは枠外（紙面側）、ダークパネルは説明＋CTA */
+.km-block { margin-bottom: 64px; }
+
+.km-intro { margin-bottom: 32px; }
+
 .km-topline {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 22px;
   flex-wrap: wrap;
   margin-bottom: 28px;
-  padding-right: 110px; /* 右上の角折り装飾と重ならないように */
 }
 
 .km-num {
@@ -479,7 +483,7 @@ em.hl {
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.2em;
-  color: var(--yellow);
+  color: var(--brand);
 }
 
 .km-tag {
@@ -497,11 +501,9 @@ em.hl {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.16em;
-  color: rgba(255, 255, 255, 0.72);
-  margin-bottom: 20px;
+  letter-spacing: 0.12em;
 }
 
 .km-cat::before {
@@ -513,22 +515,16 @@ em.hl {
 }
 
 .km-logo-main {
-  height: 60px;
+  height: 64px;
   width: auto;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .km-lead {
-  font-size: 17px;
+  font-size: 17.5px;
   font-weight: 700;
   line-height: 1.9;
   letter-spacing: 0.03em;
-  margin-bottom: 10px;
-}
-
-.km-lead .km-lead-em {
-  font-style: normal;
-  color: var(--yellow);
 }
 
 .km-feature .km-desc {
@@ -1253,10 +1249,11 @@ em.hl {
   .sec-head { margin-bottom: 44px; flex-direction: column; align-items: flex-start; gap: 12px; }
   .sec-ghost { display: none; }
 
-  .km-feature { padding: 36px 26px; }
+  .km-block { margin-bottom: 48px; }
+  .km-feature { padding: 32px 26px; }
   .km-feature ul { grid-template-columns: 1fr; }
-  .km-topline { margin-bottom: 22px; }
-  .km-logo-main { height: 44px; }
+  .km-topline { margin-bottom: 20px; gap: 12px 18px; }
+  .km-logo-main { height: 46px; }
   .km-lead { font-size: 15px; }
   .km-feature::before { width: 72px; height: 72px; }
   .km-btn { display: flex; justify-content: center; }
