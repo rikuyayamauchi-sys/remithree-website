@@ -10,27 +10,27 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-  <meta name="theme-color" content="#1a2744">
+  <meta name="theme-color" content="#F6F4EE">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Header -->
   <header class="header" id="header">
     <div class="header-inner">
-      <a href="#" class="logo">
-        <img src="assets/img/logo-white.png" alt="Remi Three" class="logo-img">
+      <a href="index.html" class="logo">
+        <img src="assets/img/logo.png" alt="Remi Three" class="logo-img">
       </a>
       <button class="hamburger" id="hamburger" aria-label="メニュー">
         <span></span><span></span><span></span>
       </button>
       <nav class="nav" id="nav">
-        <a href="#home" class="nav-link active">HOME</a>
-        <a href="company.html" class="nav-link">COMPANY</a>
-        <a href="about.html" class="nav-link">ABOUT US</a>
+        <a href="index.html" class="nav-link active">HOME</a>
         <a href="service.html" class="nav-link">SERVICE</a>
+        <a href="about.html" class="nav-link">ABOUT US</a>
+        <a href="company.html" class="nav-link">COMPANY</a>
         <a href="contact.html" class="nav-link nav-link--cta">CONTACT</a>
       </nav>
     </div>
@@ -38,72 +38,126 @@
 
   <!-- Hero -->
   <section class="hero" id="home">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-sub">HR Partner for Your Growth</p>
-      <h1 class="hero-title">
-        私たちは、HRパートナーとして<br>
-        採用やキャリア支援を通じ<br>
-        ひとりひとりの未来への想いに<br>
-        誠実に向き合うことをお約束します。
-      </h1>
-      <a href="#contact" class="hero-btn">お問い合わせ</a>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="260,40 380,150 210,170" fill="#FFDE14" opacity="0.95"/>
+        <polygon points="210,170 380,150 320,300" fill="#FFDE14" opacity="0.72"/>
+        <polygon points="260,40 210,170 120,120" fill="#FFDE14" opacity="0.82"/>
+        <polygon points="120,120 210,170 90,260" fill="#FFDE14" opacity="0.55"/>
+        <polygon points="90,260 210,170 320,300" fill="#FFDE14" opacity="0.34"/>
+        <polygon points="90,260 320,300 230,420" fill="#FFDE14" opacity="0.62"/>
+        <polygon points="380,150 430,290 320,300" fill="#FFDE14" opacity="0.45"/>
+        <polygon points="230,420 320,300 400,430" fill="none" stroke="#14192E" stroke-width="1.5" opacity="0.5"/>
+        <polygon points="430,290 462,352 402,346" fill="#14192E" opacity="0.75"/>
+      </svg>
+    </div>
+    <div class="hero-bg-word" aria-hidden="true">REMI THREE</div>
+    <div class="hero-inner">
+      <p class="hero-eyebrow">REMI THREE &mdash; HR PARTNER</p>
+      <h1 class="hero-title">未来への想いに、<br><em class="hl">誠実</em>に向き合う。</h1>
+      <p class="hero-lead">
+        私たちはHRパートナーとして、採用やキャリア支援を通じ、ひとりひとりの未来への想いに誠実に向き合うことをお約束します。
+      </p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn btn--primary">お問い合わせ<span class="btn-arrow">&rarr;</span></a>
+        <a href="#service" class="btn btn--ghost">事業内容を見る</a>
+      </div>
     </div>
   </section>
 
-  <!-- Company -->
-  <section class="section" id="company">
+  <!-- Marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">
+        RECRUITING SUPPORT <span class="tri">&#9650;</span> CAREER COACHING <span class="tri">&#9650;</span> MUSIC PRODUCTION <span class="tri">&#9650;</span> REMI THREE <span class="tri">&#9650;</span> RECRUITING SUPPORT <span class="tri">&#9650;</span> CAREER COACHING <span class="tri">&#9650;</span> MUSIC PRODUCTION <span class="tri">&#9650;</span> REMI THREE <span class="tri">&#9650;</span>
+      </span>
+      <span class="marquee-item">
+        RECRUITING SUPPORT <span class="tri">&#9650;</span> CAREER COACHING <span class="tri">&#9650;</span> MUSIC PRODUCTION <span class="tri">&#9650;</span> REMI THREE <span class="tri">&#9650;</span> RECRUITING SUPPORT <span class="tri">&#9650;</span> CAREER COACHING <span class="tri">&#9650;</span> MUSIC PRODUCTION <span class="tri">&#9650;</span> REMI THREE <span class="tri">&#9650;</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- Service -->
+  <section class="section" id="service">
     <div class="container">
-      <div class="section-header">
-        <span class="section-label">COMPANY</span>
-        <h2 class="section-title">会社概要</h2>
+      <div class="sec-head reveal">
+        <div>
+          <p class="sec-meta"><span class="sec-num">(01)</span><span>SERVICE</span></p>
+          <h2 class="sec-title">事業内容</h2>
+        </div>
+        <span class="sec-ghost" aria-hidden="true">SERVICE</span>
       </div>
-      <div class="company-table">
-        <div class="company-row">
-          <div class="company-key">会社名</div>
-          <div class="company-val">合同会社Remi Three</div>
-        </div>
-        <div class="company-row">
-          <div class="company-key">代表</div>
-          <div class="company-val">
-            <p>CEO &mdash; Rikuya Yamauchi</p>
-            <p>COO &mdash; Chiaki Yamauchi</p>
+
+      <a href="rpo/" class="km-feature-link reveal">
+        <div class="km-feature">
+          <p class="km-num">01 &mdash; RECRUITING SUPPORT</p>
+          <div class="km-feature-head">
+            <img src="assets/img/kimarumade-logo-white.png" alt="キマルマデ">
+            <span class="km-tag">NEW｜地方企業専門・成果報酬型 採用代行</span>
           </div>
+          <h3>採用支援事業</h3>
+          <p class="km-desc">採用が決まるまで、費用0円。集客から書類選考・日程調整まで弊社が実施し、貴社は面接をするだけ。人材やWEB、IT、営業、アウトソーシング業界のスタートアップや、採用に苦戦されている地方エリアの企業様をメインに、採用コンサルティングからRPOまで一気通貫の支援を行っています。</p>
+          <ul>
+            <li>成果報酬型 採用代行「キマルマデ」提供中</li>
+            <li>月額10万円〜・単月契約から可能</li>
+            <li>戦略設計から母集団形成、候補者対応まで全工程対応</li>
+            <li>コンサルティングから実務支援まで成果にコミット</li>
+          </ul>
+          <span class="km-btn">詳しく見る</span>
         </div>
-        <div class="company-row">
-          <div class="company-key">所在地</div>
-          <div class="company-val">
-            <p class="company-loc-label">本社</p>
-            <p>東京都港区北青山一丁目3番1号 アールキューブ青山3階</p>
-            <p class="company-loc-label mt-1">サテライトオフィス</p>
-            <p>神奈川県藤沢市片瀬海岸2丁目18-21 リードシー片瀬江ノ島ビル 3F</p>
+      </a>
+
+      <div class="svc-list">
+        <div class="svc-row reveal">
+          <div class="svc-num">02</div>
+          <div class="svc-main">
+            <h3 class="svc-title">20代向けキャリア支援事業<span class="svc-title-en">CAREER COACHING</span></h3>
+            <p class="svc-desc">
+              キャリア形成の考え方や具体的なビジョン・プラン構築などを通じ、20代の働くをより楽しめる状態に導きます。コーチングを通じキャリア形成をサポート。
+            </p>
           </div>
+          <ul class="svc-feats">
+            <li>1セッション / 60分 2万円〜</li>
+            <li>初回無料体験あり</li>
+            <li>大手やベンチャーなど経験豊富なコーチが多数在籍</li>
+            <li>適性業界や職種のアドバイス有</li>
+          </ul>
         </div>
-        <div class="company-row">
-          <div class="company-key">創業</div>
-          <div class="company-val">2024年6月（2021年より個人事業主で事業開始）</div>
-        </div>
-        <div class="company-row">
-          <div class="company-key">事業内容</div>
-          <div class="company-val">採用支援事業（成果報酬型 採用代行「キマルマデ」）/ キャリア支援事業 / 楽曲制作</div>
+        <div class="svc-row reveal">
+          <div class="svc-num">03</div>
+          <div class="svc-main">
+            <h3 class="svc-title">楽曲制作<span class="svc-title-en">MUSIC PRODUCTION</span></h3>
+            <p class="svc-desc">
+              BGMから歌い手向けまで幅広く対応。打ち合わせから修正依頼まで柔軟に対応いたします。
+            </p>
+          </div>
+          <ul class="svc-feats">
+            <li>1曲5万円〜</li>
+            <li>納期2週間〜</li>
+            <li>BGMから歌い手向けまで対応</li>
+            <li>打ち合わせから修正依頼は柔軟に対応</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
   <!-- About Us -->
-  <section class="section section--dark" id="about">
+  <section class="section section--white" id="about">
     <div class="container">
-      <div class="section-header section-header--light">
-        <span class="section-label">ABOUT US</span>
-        <h2 class="section-title">代表紹介</h2>
+      <div class="sec-head reveal">
+        <div>
+          <p class="sec-meta"><span class="sec-num">(02)</span><span>ABOUT US</span></p>
+          <h2 class="sec-title">代表紹介</h2>
+        </div>
+        <span class="sec-ghost" aria-hidden="true">ABOUT</span>
       </div>
-      <div class="about-grid">
+      <div class="about-grid reveal">
         <div class="about-photo">
           <img src="assets/img/profile.jpg" alt="山内 陸也" class="about-img">
         </div>
         <div class="about-text">
-          <h3 class="about-name">山内 陸也<span class="about-name-en">Rikuya Yamauchi</span></h3>
+          <h3 class="about-name">山内 陸也<span class="about-name-en">RIKUYA YAMAUCHI</span></h3>
           <p class="about-role">合同会社Remi Three 代表</p>
           <p class="about-bio">
             2015年に株式会社マイナビに入社し、採用メディアのプランニングを中心に、イベントやRPOサービスを通じて企業の中途採用課題の解決に取り組んできました。
@@ -125,7 +179,7 @@
 
       <!-- Career Timeline -->
       <div class="timeline">
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-year">2015</div>
           <div class="timeline-content">
             <h4>株式会社マイナビ</h4>
@@ -133,7 +187,7 @@
             <p>大学卒業後、新卒入社。東北支社に配属され、法人向けの中途採用における課題解決に従事。3年のプレイヤー経験を経てマネジメントにも従事。マイナビ転職を始めとする集客チャネルや選考フロー・面接設計の改善提案を行い、企業の採用成功に寄与。</p>
           </div>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-year">2019</div>
           <div class="timeline-content">
             <h4>indeed Japan 株式会社</h4>
@@ -141,7 +195,7 @@
             <p>中途入社。求人に特化した運用型広告「indeed」の直販セールスとして首都圏を中心に、全国の企業様に対してコンサルティング業務に従事。indeed運用の最適化及び採用計画や市況感から逆算した採用マーケティングの企画提案を通じて、採用成功に向けて伴走。</p>
           </div>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-year">2021</div>
           <div class="timeline-content">
             <h4>人材&times;ITベンチャー</h4>
@@ -149,7 +203,7 @@
             <p>社員数10名から50名越えの拡大フェーズに携わり、新規採用から社員定着施策まで、人事領域全般に携わりました。競合ひしめく人材業界において、営業からマーケター、バックオフィス、マネジメントレイヤーまでの採用成功を実現。</p>
           </div>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-year">2024</div>
           <div class="timeline-content">
             <h4>合同会社Remi Three</h4>
@@ -161,62 +215,44 @@
     </div>
   </section>
 
-  <!-- Service -->
-  <section class="section" id="service">
+  <!-- Company -->
+  <section class="section" id="company">
     <div class="container">
-      <div class="section-header">
-        <span class="section-label">SERVICE</span>
-        <h2 class="section-title">事業内容</h2>
+      <div class="sec-head reveal">
+        <div>
+          <p class="sec-meta"><span class="sec-num">(03)</span><span>COMPANY</span></p>
+          <h2 class="sec-title">会社概要</h2>
+        </div>
+        <span class="sec-ghost" aria-hidden="true">COMPANY</span>
       </div>
-      <a href="rpo/" class="km-feature-link">
-        <div class="km-feature">
-          <div class="km-feature-head">
-            <img src="assets/img/kimarumade-logo-white.png" alt="キマルマデ">
-            <span class="km-tag">NEW｜地方企業専門・成果報酬型 採用代行</span>
-          </div>
-          <h3>採用支援事業</h3>
-          <p class="km-desc">採用が決まるまで、費用0円。集客から書類選考・日程調整まで弊社が実施し、貴社は面接をするだけ。人材やWEB、IT、営業、アウトソーシング業界のスタートアップや、採用に苦戦されている地方エリアの企業様をメインに、採用コンサルティングからRPOまで一気通貫の支援を行っています。</p>
-          <ul>
-            <li>成果報酬型 採用代行「キマルマデ」提供中</li>
-            <li>月額10万円〜・単月契約から可能</li>
-            <li>戦略設計から母集団形成、候補者対応まで全工程対応</li>
-            <li>コンサルティングから実務支援まで成果にコミット</li>
-          </ul>
-          <span class="km-btn">詳しく見る</span>
+      <div class="company-table">
+        <div class="company-row reveal">
+          <div class="company-key">会社名</div>
+          <div class="company-val">合同会社Remi Three</div>
         </div>
-      </a>
-      <div class="service-grid">
-        <!-- キャリア支援 -->
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <div class="company-row reveal">
+          <div class="company-key">代表</div>
+          <div class="company-val">
+            <p>CEO &mdash; Rikuya Yamauchi</p>
+            <p>COO &mdash; Chiaki Yamauchi</p>
           </div>
-          <h3 class="service-title">20代向けキャリア支援事業</h3>
-          <p class="service-desc">
-            キャリア形成の考え方や具体的なビジョン・プラン構築などを通じ、20代の働くをより楽しめる状態に導きます。コーチングを通じキャリア形成をサポート。
-          </p>
-          <ul class="service-features">
-            <li>1セッション / 60分 2万円〜</li>
-            <li>初回無料体験あり</li>
-            <li>大手やベンチャーなど経験豊富なコーチが多数在籍</li>
-            <li>適性業界や職種のアドバイス有</li>
-          </ul>
         </div>
-        <!-- 楽曲制作 -->
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        <div class="company-row reveal">
+          <div class="company-key">所在地</div>
+          <div class="company-val">
+            <p class="company-loc-label">本社</p>
+            <p>東京都港区北青山一丁目3番1号 アールキューブ青山3階</p>
+            <p class="company-loc-label mt-1">サテライトオフィス</p>
+            <p>神奈川県藤沢市片瀬海岸2丁目18-21 リードシー片瀬江ノ島ビル 3F</p>
           </div>
-          <h3 class="service-title">楽曲制作</h3>
-          <p class="service-desc">
-            BGMから歌い手向けまで幅広く対応。打ち合わせから修正依頼まで柔軟に対応いたします。
-          </p>
-          <ul class="service-features">
-            <li>1曲5万円〜</li>
-            <li>納期2週間〜</li>
-            <li>BGMから歌い手向けまで対応</li>
-            <li>打ち合わせから修正依頼は柔軟に対応</li>
-          </ul>
+        </div>
+        <div class="company-row reveal">
+          <div class="company-key">創業</div>
+          <div class="company-val">2024年6月（2021年より個人事業主で事業開始）</div>
+        </div>
+        <div class="company-row reveal">
+          <div class="company-key">事業内容</div>
+          <div class="company-val">採用支援事業（成果報酬型 採用代行「キマルマデ」）/ キャリア支援事業 / 楽曲制作</div>
         </div>
       </div>
     </div>
@@ -225,17 +261,18 @@
   <!-- Contact -->
   <section class="section section--navy" id="contact">
     <div class="container">
-      <div class="section-header section-header--light">
-        <span class="section-label">CONTACT</span>
-        <h2 class="section-title">お問い合わせ</h2>
+      <div class="sec-head reveal">
+        <div>
+          <p class="sec-meta"><span class="sec-num">(04)</span><span>CONTACT</span></p>
+          <h2 class="sec-title">お問い合わせ</h2>
+        </div>
+        <span class="sec-ghost" aria-hidden="true">CONTACT</span>
       </div>
-      <div class="contact-grid">
+      <div class="contact-grid reveal">
         <div class="contact-info">
+          <p class="contact-lead-title">まずは、お気軽に<br>ご相談ください。</p>
           <p class="contact-lead">
-            合同会社Remi Threeへの<br>
-            ・採用に関する<br>
-            ・キャリア形成に関する<br><br>
-            ご相談はこちらからお問い合わせください。
+            採用に関するご相談、キャリア形成に関するご相談など、合同会社Remi Threeへのお問い合わせはこちらのフォームから承ります。
           </p>
           <div class="contact-email">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -283,21 +320,22 @@
         <img src="assets/img/logo-white.png" alt="Remi Three" class="footer-logo">
         <nav class="footer-nav">
           <a href="index.html">HOME</a>
-          <a href="company.html">COMPANY</a>
-          <a href="about.html">ABOUT US</a>
           <a href="service.html">SERVICE</a>
+          <a href="about.html">ABOUT US</a>
+          <a href="company.html">COMPANY</a>
           <a href="contact.html">CONTACT</a>
-          <a href="privacy.html">プライバシーポリシー</a>
+          <a href="privacy.html">PRIVACY POLICY</a>
         </nav>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Remi Three .LLC. All Rights Reserved.</p>
-      </div>
+    </div>
+    <p class="footer-giant" aria-hidden="true">REMI THREE</p>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Remi Three LLC. All Rights Reserved.</p>
     </div>
   </footer>
 
   <script>
-    // Smooth scroll
+    // Smooth scroll（ページ内アンカーのみ）
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         e.preventDefault();
@@ -308,7 +346,6 @@
           const offset = document.querySelector('.header').offsetHeight;
           window.scrollTo({ top: el.offsetTop - offset, behavior: 'smooth' });
         }
-        // Close mobile nav
         document.getElementById('nav').classList.remove('open');
         document.getElementById('hamburger').classList.remove('open');
       });
@@ -321,22 +358,20 @@
     });
 
     // Header scroll effect
-    window.addEventListener('scroll', () => {
-      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
-    });
+    const onScroll = () => document.getElementById('header').classList.toggle('scrolled', window.scrollY > 30);
+    window.addEventListener('scroll', onScroll);
+    onScroll();
 
-    // Scroll animation
+    // Scroll reveal
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.service-card, .timeline-item, .company-row, .about-grid, .contact-grid').forEach(el => {
-      el.classList.add('fade-up');
-      observer.observe(el);
-    });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 </body>
 </html>

@@ -9,35 +9,42 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-  <meta name="theme-color" content="#1a2744">
+  <meta name="theme-color" content="#F6F4EE">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header scrolled" id="header">
+  <!-- Header -->
+  <header class="header" id="header">
     <div class="header-inner">
       <a href="index.html" class="logo">
-        <img src="assets/img/logo-white.png" alt="Remi Three" class="logo-img">
+        <img src="assets/img/logo.png" alt="Remi Three" class="logo-img">
       </a>
       <button class="hamburger" id="hamburger" aria-label="メニュー">
         <span></span><span></span><span></span>
       </button>
       <nav class="nav" id="nav">
         <a href="index.html" class="nav-link">HOME</a>
-        <a href="company.html" class="nav-link">COMPANY</a>
-        <a href="about.html" class="nav-link">ABOUT US</a>
         <a href="service.html" class="nav-link">SERVICE</a>
+        <a href="about.html" class="nav-link">ABOUT US</a>
+        <a href="company.html" class="nav-link">COMPANY</a>
         <a href="contact.html" class="nav-link nav-link--cta">CONTACT</a>
       </nav>
     </div>
   </header>
 
+  <!-- Page Head -->
+  <section class="page-head">
+    <div class="container">
+      <p class="page-en" aria-hidden="true">PRIVACY</p>
+      <h1 class="page-title">プライバシーポリシー</h1>
+    </div>
+  </section>
+
   <main class="privacy-page">
     <div class="container">
-      <h1 class="privacy-title">プライバシーポリシー</h1>
-
       <div class="privacy-content">
         <p>合同会社Remi Three（以下「当社」）は、お客様の個人情報の保護を重要な責務と認識し、以下のとおりプライバシーポリシーを定め、個人情報の保護に努めます。</p>
 
@@ -80,22 +87,24 @@
     </div>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
         <img src="assets/img/logo-white.png" alt="Remi Three" class="footer-logo">
         <nav class="footer-nav">
           <a href="index.html">HOME</a>
-          <a href="company.html">COMPANY</a>
-          <a href="about.html">ABOUT US</a>
           <a href="service.html">SERVICE</a>
+          <a href="about.html">ABOUT US</a>
+          <a href="company.html">COMPANY</a>
           <a href="contact.html">CONTACT</a>
-          <a href="privacy.html">プライバシーポリシー</a>
+          <a href="privacy.html">PRIVACY POLICY</a>
         </nav>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Remi Three .LLC. All Rights Reserved.</p>
-      </div>
+    </div>
+    <p class="footer-giant" aria-hidden="true">REMI THREE</p>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Remi Three LLC. All Rights Reserved.</p>
     </div>
   </footer>
 
@@ -104,6 +113,10 @@
       document.getElementById('nav').classList.toggle('open');
       document.getElementById('hamburger').classList.toggle('open');
     });
+
+    const onScroll = () => document.getElementById('header').classList.toggle('scrolled', window.scrollY > 30);
+    window.addEventListener('scroll', onScroll);
+    onScroll();
   </script>
 </body>
 </html>

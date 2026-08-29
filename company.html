@@ -10,63 +10,56 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-  <meta name="theme-color" content="#1a2744">
+  <meta name="theme-color" content="#F6F4EE">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Header -->
   <header class="header" id="header">
     <div class="header-inner">
       <a href="index.html" class="logo">
-        <img src="assets/img/logo-white.png" alt="Remi Three" class="logo-img">
+        <img src="assets/img/logo.png" alt="Remi Three" class="logo-img">
       </a>
       <button class="hamburger" id="hamburger" aria-label="メニュー">
         <span></span><span></span><span></span>
       </button>
       <nav class="nav" id="nav">
         <a href="index.html" class="nav-link">HOME</a>
-        <a href="company.html" class="nav-link active">COMPANY</a>
-        <a href="about.html" class="nav-link">ABOUT US</a>
         <a href="service.html" class="nav-link">SERVICE</a>
-        <a href="index.html#contact" class="nav-link nav-link--cta">CONTACT</a>
+        <a href="about.html" class="nav-link">ABOUT US</a>
+        <a href="company.html" class="nav-link active">COMPANY</a>
+        <a href="contact.html" class="nav-link nav-link--cta">CONTACT</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section for Company -->
-  <section class="hero hero--page">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1 class="hero-title">
-        会社概要
-      </h1>
-      <p class="hero-sub">About Our Company</p>
+  <!-- Page Head -->
+  <section class="page-head">
+    <div class="container">
+      <p class="page-en" aria-hidden="true">COMPANY</p>
+      <h1 class="page-title">会社概要</h1>
     </div>
   </section>
 
   <!-- Company -->
   <section class="section" id="company">
     <div class="container">
-      <div class="section-header">
-        <span class="section-label">COMPANY</span>
-        <h2 class="section-title">会社概要</h2>
-      </div>
       <div class="company-table">
-        <div class="company-row">
+        <div class="company-row reveal">
           <div class="company-key">会社名</div>
           <div class="company-val">合同会社Remi Three</div>
         </div>
-        <div class="company-row">
+        <div class="company-row reveal">
           <div class="company-key">代表</div>
           <div class="company-val">
             <p>CEO &mdash; Rikuya Yamauchi</p>
             <p>COO &mdash; Chiaki Yamauchi</p>
           </div>
         </div>
-        <div class="company-row">
+        <div class="company-row reveal">
           <div class="company-key">所在地</div>
           <div class="company-val">
             <p class="company-loc-label">本社</p>
@@ -75,11 +68,11 @@
             <p>神奈川県藤沢市片瀬海岸2丁目18-21 リードシー片瀬江ノ島ビル 3F</p>
           </div>
         </div>
-        <div class="company-row">
+        <div class="company-row reveal">
           <div class="company-key">創業</div>
           <div class="company-val">2024年6月（2021年より個人事業主で事業開始）</div>
         </div>
-        <div class="company-row">
+        <div class="company-row reveal">
           <div class="company-key">事業内容</div>
           <div class="company-val">採用支援事業（成果報酬型 採用代行「キマルマデ」）/ キャリア支援事業 / 楽曲制作</div>
         </div>
@@ -94,43 +87,39 @@
         <img src="assets/img/logo-white.png" alt="Remi Three" class="footer-logo">
         <nav class="footer-nav">
           <a href="index.html">HOME</a>
-          <a href="company.html">COMPANY</a>
-          <a href="about.html">ABOUT US</a>
           <a href="service.html">SERVICE</a>
-          <a href="index.html#contact">CONTACT</a>
-          <a href="privacy.html">プライバシーポリシー</a>
+          <a href="about.html">ABOUT US</a>
+          <a href="company.html">COMPANY</a>
+          <a href="contact.html">CONTACT</a>
+          <a href="privacy.html">PRIVACY POLICY</a>
         </nav>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Remi Three .LLC. All Rights Reserved.</p>
-      </div>
+    </div>
+    <p class="footer-giant" aria-hidden="true">REMI THREE</p>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Remi Three LLC. All Rights Reserved.</p>
     </div>
   </footer>
 
   <script>
-    // Hamburger
     document.getElementById('hamburger').addEventListener('click', () => {
       document.getElementById('nav').classList.toggle('open');
       document.getElementById('hamburger').classList.toggle('open');
     });
 
-    // Header scroll effect
-    window.addEventListener('scroll', () => {
-      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
-    });
+    const onScroll = () => document.getElementById('header').classList.toggle('scrolled', window.scrollY > 30);
+    window.addEventListener('scroll', onScroll);
+    onScroll();
 
-    // Scroll animation
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.company-row').forEach(el => {
-      el.classList.add('fade-up');
-      observer.observe(el);
-    });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 </body>
 </html>

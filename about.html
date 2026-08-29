@@ -10,56 +10,49 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-  <meta name="theme-color" content="#1a2744">
+  <meta name="theme-color" content="#F6F4EE">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Header -->
   <header class="header" id="header">
     <div class="header-inner">
       <a href="index.html" class="logo">
-        <img src="assets/img/logo-white.png" alt="Remi Three" class="logo-img">
+        <img src="assets/img/logo.png" alt="Remi Three" class="logo-img">
       </a>
       <button class="hamburger" id="hamburger" aria-label="メニュー">
         <span></span><span></span><span></span>
       </button>
       <nav class="nav" id="nav">
         <a href="index.html" class="nav-link">HOME</a>
-        <a href="company.html" class="nav-link">COMPANY</a>
-        <a href="about.html" class="nav-link active">ABOUT US</a>
         <a href="service.html" class="nav-link">SERVICE</a>
-        <a href="index.html#contact" class="nav-link nav-link--cta">CONTACT</a>
+        <a href="about.html" class="nav-link active">ABOUT US</a>
+        <a href="company.html" class="nav-link">COMPANY</a>
+        <a href="contact.html" class="nav-link nav-link--cta">CONTACT</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section for About -->
-  <section class="hero hero--page">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1 class="hero-title">
-        代表紹介
-      </h1>
-      <p class="hero-sub">About Representative</p>
+  <!-- Page Head -->
+  <section class="page-head">
+    <div class="container">
+      <p class="page-en" aria-hidden="true">ABOUT US</p>
+      <h1 class="page-title">代表紹介</h1>
     </div>
   </section>
 
   <!-- About Us -->
-  <section class="section section--light" id="about">
+  <section class="section" id="about">
     <div class="container">
-      <div class="section-header">
-        <span class="section-label">ABOUT US</span>
-        <h2 class="section-title">代表紹介</h2>
-      </div>
-      <div class="about-grid">
+      <div class="about-grid reveal">
         <div class="about-photo">
           <img src="assets/img/profile.jpg" alt="山内 陸也" class="about-img">
         </div>
         <div class="about-text">
-          <h3 class="about-name">山内 陸也<span class="about-name-en">Rikuya Yamauchi</span></h3>
+          <h3 class="about-name">山内 陸也<span class="about-name-en">RIKUYA YAMAUCHI</span></h3>
           <p class="about-role">合同会社Remi Three 代表</p>
           <p class="about-bio">
             2015年に株式会社マイナビに入社し、採用メディアのプランニングを中心に、イベントやRPOサービスを通じて企業の中途採用課題の解決に取り組んできました。
@@ -81,7 +74,7 @@
 
       <!-- Career Timeline -->
       <div class="timeline">
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-year">2015</div>
           <div class="timeline-content">
             <h4>株式会社マイナビ</h4>
@@ -89,7 +82,7 @@
             <p>大学卒業後、新卒入社。東北支社に配属され、法人向けの中途採用における課題解決に従事。3年のプレイヤー経験を経てマネジメントにも従事。マイナビ転職を始めとする集客チャネルや選考フロー・面接設計の改善提案を行い、企業の採用成功に寄与。</p>
           </div>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-year">2019</div>
           <div class="timeline-content">
             <h4>indeed Japan 株式会社</h4>
@@ -97,7 +90,7 @@
             <p>中途入社。求人に特化した運用型広告「indeed」の直販セールスとして首都圏を中心に、全国の企業様に対してコンサルティング業務に従事。indeed運用の最適化及び採用計画や市況感から逆算した採用マーケティングの企画提案を通じて、採用成功に向けて伴走。</p>
           </div>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-year">2021</div>
           <div class="timeline-content">
             <h4>人材&times;ITベンチャー</h4>
@@ -105,7 +98,7 @@
             <p>社員数10名から50名越えの拡大フェーズに携わり、新規採用から社員定着施策まで、人事領域全般に携わりました。競合ひしめく人材業界において、営業からマーケター、バックオフィス、マネジメントレイヤーまでの採用成功を実現。</p>
           </div>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-year">2024</div>
           <div class="timeline-content">
             <h4>合同会社Remi Three</h4>
@@ -124,43 +117,39 @@
         <img src="assets/img/logo-white.png" alt="Remi Three" class="footer-logo">
         <nav class="footer-nav">
           <a href="index.html">HOME</a>
-          <a href="company.html">COMPANY</a>
-          <a href="about.html">ABOUT US</a>
           <a href="service.html">SERVICE</a>
-          <a href="index.html#contact">CONTACT</a>
-          <a href="privacy.html">プライバシーポリシー</a>
+          <a href="about.html">ABOUT US</a>
+          <a href="company.html">COMPANY</a>
+          <a href="contact.html">CONTACT</a>
+          <a href="privacy.html">PRIVACY POLICY</a>
         </nav>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Remi Three .LLC. All Rights Reserved.</p>
-      </div>
+    </div>
+    <p class="footer-giant" aria-hidden="true">REMI THREE</p>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Remi Three LLC. All Rights Reserved.</p>
     </div>
   </footer>
 
   <script>
-    // Hamburger
     document.getElementById('hamburger').addEventListener('click', () => {
       document.getElementById('nav').classList.toggle('open');
       document.getElementById('hamburger').classList.toggle('open');
     });
 
-    // Header scroll effect
-    window.addEventListener('scroll', () => {
-      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
-    });
+    const onScroll = () => document.getElementById('header').classList.toggle('scrolled', window.scrollY > 30);
+    window.addEventListener('scroll', onScroll);
+    onScroll();
 
-    // Scroll animation
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.timeline-item, .about-grid').forEach(el => {
-      el.classList.add('fade-up');
-      observer.observe(el);
-    });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
