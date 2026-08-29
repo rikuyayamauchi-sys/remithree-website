@@ -220,14 +220,6 @@
       display: flex; align-items: center; gap: 12px;
     }
     .reason-card h3 svg { width: 22px; height: 22px; color: var(--yellow); flex-shrink: 0; }
-    .reason-person { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
-    .reason-person img {
-      width: 68px; height: 68px; border-radius: 50%;
-      object-fit: cover; object-position: center 12%;
-      border: 2px solid var(--yellow);
-    }
-    .reason-person .rp-name { font-size: 16px; font-weight: 700; color: var(--white); }
-    .reason-person .rp-role { font-size: 12.5px; color: rgba(255,255,255,0.7); margin-top: 2px; }
     .reason-card p { font-size: 14px; line-height: 2.05; color: rgba(255,255,255,0.88); }
     .reason-card ul { list-style: none; margin-top: 16px; }
     .reason-card li {
@@ -336,37 +328,32 @@
     .flow-tag--us { background: var(--ink); color: var(--white); }
     .flow-tag--you { background: var(--yellow); color: var(--ink); }
 
-    /* 代表紹介 */
-    .prof-grid { display: grid; grid-template-columns: 260px 1fr; gap: 64px; align-items: start; max-width: 980px; }
-    .prof-photo { position: relative; }
-    .prof-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; position: relative; z-index: 1; }
-    .prof-photo::after {
-      content: '';
-      position: absolute;
-      top: 14px; left: 14px;
-      width: 100%; height: 100%;
-      border: 1px solid var(--ink);
-      z-index: 0;
+    /* 運営会社 */
+    .co-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 64px; align-items: start; max-width: 1040px; }
+    .co-h {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 17px; font-weight: 900;
+      margin-bottom: 18px; letter-spacing: 0.06em;
     }
-    .prof-photo::before {
+    .co-h::before {
       content: '';
-      position: absolute;
-      bottom: -12px; right: -24px;
-      width: 56px; height: 56px;
+      width: 11px; height: 11px;
       background: var(--yellow);
       clip-path: polygon(50% 0, 100% 100%, 0 100%);
-      z-index: 2;
     }
-    .prof-name { font-size: 26px; font-weight: 900; margin-bottom: 4px; letter-spacing: 0.05em; }
-    .prof-role {
-      display: inline-block;
-      font-size: 12.5px; font-weight: 700;
-      background: var(--yellow); color: var(--ink);
-      padding: 3px 12px; border-radius: 2px;
-      margin: 10px 0 22px;
+    .co-bio { font-size: 14.5px; line-height: 2.1; margin-bottom: 16px; }
+    .co-table { width: 100%; border-collapse: collapse; border-top: 1px solid var(--line); }
+    .co-table td {
+      padding: 13px 6px; font-size: 13.5px;
+      border-bottom: 1px solid var(--line);
+      line-height: 1.8; vertical-align: top;
     }
-    .prof-bio { font-size: 14.5px; line-height: 2.15; margin-bottom: 14px; }
-    .prof-career { margin-top: 20px; list-style: none; }
+    .co-table td:first-child {
+      color: var(--muted); white-space: nowrap;
+      padding-right: 22px; font-size: 12.5px; font-weight: 700;
+    }
+    .co-table a { border-bottom: 2px solid var(--yellow); padding-bottom: 1px; }
+    .prof-career { margin-top: 4px; list-style: none; }
     .prof-career li {
       position: relative;
       padding: 8px 0 8px 24px; font-size: 13.5px; line-height: 1.8;
@@ -426,8 +413,7 @@
       .lp-hero-visual { right: -22%; opacity: 0.35; width: 70vw; }
       .worry-grid, .reason-grid { grid-template-columns: 1fr; gap: 18px; }
       .role-grid { grid-template-columns: 1fr; }
-      .prof-grid { grid-template-columns: 1fr; gap: 48px; }
-      .prof-photo { max-width: 280px; }
+      .co-grid { grid-template-columns: 1fr; gap: 40px; }
       .flow-item { grid-template-columns: 64px 1fr; gap: 18px; padding: 28px 4px; }
       .flow-num { font-size: 26px; }
       .role-card { padding: 32px 26px; }
@@ -569,15 +555,8 @@
       <p class="reason-formula">地方採用のプロ<span class="x">&times;</span>AIオペレーション</p>
       <div class="reason-grid">
         <div class="reason-card reveal">
-          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>地方採用のプロが直接支援</h3>
-          <div class="reason-person">
-            <img src="../assets/img/profile.jpg" alt="山内 陸也">
-            <div>
-              <p class="rp-name">山内 陸也</p>
-              <p class="rp-role">代表｜マイナビ・Indeed Japan出身</p>
-            </div>
-          </div>
-          <p>代表はマイナビ（仙台・郡山）で東北の採用難エリアを5年、indeed Japanで運用型求人広告のコンサルティングを経験。その後は事業会社の人事として採用チームの立ち上げから拡大まで携わりました。「募集する側」と「採用する側」の両方を知り尽くしているから、地方の採用でも成果を出せます。</p>
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>地方採用に強いプロフェッショナル</h3>
+          <p>弊社はマイナビ・indeed Japan出身メンバーが立ち上げた採用支援会社です。東北をはじめとする採用難エリアで5年にわたり中小企業の中途採用を支援し、運用型求人広告のコンサルティングや事業会社での人事実務も経験。「募集する側」と「採用する側」の両方の知見があるから、地方の採用でも成果を出せます。</p>
         </div>
         <div class="reason-card reveal">
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>AIで採用業務を自動化</h3>
@@ -727,32 +706,37 @@
     </div>
   </section>
 
-  <!-- 代表紹介 -->
+  <!-- 運営会社 -->
   <section class="section">
     <div class="container">
       <div class="sec-head reveal">
         <div>
-          <p class="sec-meta"><span class="sec-num">(06)</span><span>ABOUT</span></p>
-          <h2 class="sec-title">支援するのは、地方採用のプロです。</h2>
+          <p class="sec-meta"><span class="sec-num">(06)</span><span>COMPANY</span></p>
+          <h2 class="sec-title">地方採用を専門とする、<br>採用支援会社です。</h2>
         </div>
-        <span class="sec-ghost" aria-hidden="true">ABOUT</span>
+        <span class="sec-ghost" aria-hidden="true">COMPANY</span>
       </div>
-      <div class="prof-grid reveal">
-        <div class="prof-photo">
-          <img src="../assets/img/profile.jpg" alt="山内 陸也">
-        </div>
+      <div class="co-grid reveal">
         <div>
-          <p class="prof-name">山内 陸也</p>
-          <p class="prof-role">合同会社Remi Three 代表</p>
-          <p class="prof-bio">
-            マイナビでは仙台・郡山を拠点に、東北の採用難エリアで5年間、数多くの中小企業の中途採用を支援。indeed Japanでは運用型求人広告のコンサルタントとして、広告運用による母集団形成のノウハウを培いました。その後は人材系ベンチャーの人事責任者として、社員数10名から50名超への拡大を採用面から牽引。「支援する側」と「採用する側」の両方を経験しているからこそ、絵に描いた餅ではない、現場で機能する採用支援を提供します。
+          <h3 class="co-h">弊社の知見</h3>
+          <p class="co-bio">
+            弊社はマイナビ・indeed Japan出身メンバーが立ち上げた採用支援会社です。「支援する側」と「採用する側」の両方を経験しているからこそ、絵に描いた餅ではない、現場で機能する採用支援を提供します。
           </p>
           <ul class="prof-career">
-            <li>株式会社マイナビ（仙台・郡山）— 中途採用支援セールス / マネージャー</li>
-            <li>Indeed Japan 株式会社 — 運用型求人広告のコンサルティング</li>
-            <li>人材×ITベンチャー — 人事責任者として採用チームを立ち上げ</li>
-            <li>2024年 合同会社Remi Three 設立</li>
+            <li>マイナビ（仙台・郡山）での5年間、東北の採用難エリアで数多くの中小企業の中途採用を支援</li>
+            <li>indeed Japanでの運用型求人広告コンサルティングで培った、広告運用による母集団形成のノウハウ</li>
+            <li>事業会社の人事責任者として、社員数10名から50名超への拡大を採用面から牽引した実務経験</li>
           </ul>
+        </div>
+        <div>
+          <h3 class="co-h">会社概要</h3>
+          <table class="co-table">
+            <tr><td>会社名</td><td>合同会社Remi Three</td></tr>
+            <tr><td>所在地</td><td>東京都港区北青山一丁目3番1号 アールキューブ青山3階</td></tr>
+            <tr><td>創業</td><td>2024年6月（2021年より個人事業で開始）</td></tr>
+            <tr><td>事業内容</td><td>採用支援事業（成果報酬型 採用代行「キマルマデ」）/ キャリア支援事業</td></tr>
+            <tr><td>WEB</td><td><a href="../index.html">https://remithree.com/</a></td></tr>
+          </table>
         </div>
       </div>
     </div>
@@ -787,7 +771,7 @@
         </details>
         <details class="faq-item">
           <summary>どんな職種・エリアに対応していますか？</summary>
-          <div class="faq-a">ドライバー・製造・介護・販売接客・営業職など、現場系の職種を得意としています。エリアは地方全域に対応しており、特に東北エリアは代表が長年支援してきた得意領域です。複数拠点での同時募集にも対応します。</div>
+          <div class="faq-a">ドライバー・製造・介護・販売接客・営業職など、現場系の職種を得意としています。エリアは地方全域に対応しており、特に東北エリアは弊社が長年支援してきた得意領域です。複数拠点での同時募集にも対応します。</div>
         </details>
         <details class="faq-item">
           <summary>契約期間の縛りはありますか？</summary>
