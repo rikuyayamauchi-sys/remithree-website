@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>成果報酬型 採用代行 | Remi Three - 採用できるまで費用はかかりません</title>
+  <meta name="description" content="地方企業向けの完全成果報酬型 採用代行。indeed・求人ボックスでの集客から書類選考・日程調整まで弊社が実施、貴社は面接をするだけ。採用コンサルティング・採用代行・広告運用の手数料は無料、費用は採用成功時のみ。">
+  <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+  <meta name="theme-color" content="#1a2744">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== RPO LP 専用スタイル（style.css を継承） ===== */
+    .lp-hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 55%, var(--navy-light) 100%);
+      color: var(--white);
+      padding: 120px 24px 80px;
+      overflow: hidden;
+    }
+    .lp-hero::after {
+      content: "";
+      position: absolute;
+      right: -180px; top: -180px;
+      width: 560px; height: 560px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(74,144,217,0.25) 0%, transparent 70%);
+    }
+    .lp-hero-inner { max-width: 900px; margin: 0 auto; position: relative; z-index: 1; text-align: center; }
+    .lp-hero-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy-dark);
+      font-weight: 700;
+      font-size: 17px;
+      padding: 10px 28px;
+      border-radius: 999px;
+      letter-spacing: 0.06em;
+      margin-bottom: 28px;
+    }
+    .lp-hero-badge .strong { font-size: 1.15em; font-weight: 900; }
+    .lp-hero h1 {
+      font-size: clamp(30px, 5.4vw, 54px);
+      font-weight: 900;
+      line-height: 1.45;
+      letter-spacing: 0.02em;
+      margin-bottom: 24px;
+    }
+    .lp-hero h1 .accent { color: var(--accent-light); }
+    .lp-hero-lead {
+      font-size: clamp(16px, 2.2vw, 21px);
+      font-weight: 500;
+      line-height: 1.9;
+      margin-bottom: 32px;
+      color: rgba(255,255,255,0.92);
+    }
+    .lp-note {
+      font-size: 12.5px;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.65);
+      max-width: 680px;
+      margin: 0 auto 36px;
+      text-align: left;
+      border-left: 2px solid rgba(255,255,255,0.3);
+      padding-left: 14px;
+    }
+    .lp-cta-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 700;
+      padding: 18px 56px;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 8px 32px rgba(74,144,217,0.45);
+      transition: var(--transition);
+    }
+    .lp-cta-btn:hover { background: var(--accent-light); transform: translateY(-2px); }
+    .lp-cta-sub { font-size: 13px; margin-top: 12px; color: rgba(255,255,255,0.7); }
+
+    .lp-section { padding: 88px 24px; }
+    .lp-section--gray { background: var(--gray-50); }
+    .lp-section--navy { background: var(--navy); color: var(--white); }
+    .lp-container { max-width: 1000px; margin: 0 auto; }
+    .lp-label {
+      display: block; text-align: center;
+      color: var(--accent); font-family: 'Inter', sans-serif;
+      font-size: 13px; font-weight: 600; letter-spacing: 0.2em;
+      margin-bottom: 10px;
+    }
+    .lp-section--navy .lp-label { color: var(--accent-light); }
+    .lp-h2 {
+      text-align: center;
+      font-size: clamp(24px, 3.6vw, 34px);
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 48px;
+      color: var(--navy);
+    }
+    .lp-section--navy .lp-h2 { color: var(--white); }
+
+    /* お悩みカード */
+    .worry-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .worry-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 32px 26px;
+      text-align: center;
+    }
+    .worry-icon {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: var(--navy); color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .worry-icon svg { width: 28px; height: 28px; }
+    .worry-card h3 { font-size: 17px; color: var(--navy); margin-bottom: 10px; line-height: 1.6; }
+    .worry-card p { font-size: 14px; color: var(--text-light); line-height: 1.8; }
+    .worry-arrow { text-align: center; font-size: 34px; color: var(--accent); margin: 36px 0 0; }
+
+    /* 分担表 */
+    .role-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; align-items: stretch; }
+    .role-card {
+      border-radius: var(--radius);
+      padding: 36px 30px;
+    }
+    .role-card--us { background: var(--navy); color: var(--white); }
+    .role-card--you { background: var(--white); border: 2px solid var(--accent); color: var(--navy); }
+    .role-card h3 { font-size: 20px; margin-bottom: 20px; font-weight: 700; }
+    .role-card--us h3 { color: var(--accent-light); }
+    .role-card--you h3 { color: var(--accent); }
+    .role-card ul { list-style: none; padding: 0; margin: 0; }
+    .role-card li {
+      position: relative;
+      padding: 9px 0 9px 30px;
+      font-size: 15px;
+      line-height: 1.7;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+    .role-card--you li { border-bottom-color: var(--gray-100); }
+    .role-card li::before {
+      content: "✓";
+      position: absolute; left: 0; top: 9px;
+      font-weight: 700;
+      color: var(--accent-light);
+    }
+    .role-card--you li::before { color: var(--accent); }
+    .role-card--you .role-big {
+      font-size: 26px; font-weight: 900; text-align: center;
+      color: var(--navy); margin: 24px 0 8px; line-height: 1.5;
+    }
+    .role-card--you .role-note { font-size: 13px; color: var(--text-light); text-align: center; }
+
+    /* 理由（採用力×AI） */
+    .reason-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .reason-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: var(--radius);
+      padding: 34px 30px;
+    }
+    .reason-card h3 {
+      font-size: 19px; color: var(--gold); margin-bottom: 16px; font-weight: 700;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .reason-card h3 svg { width: 24px; height: 24px; color: var(--accent-light); flex-shrink: 0; }
+    .reason-person { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+    .reason-person img {
+      width: 68px; height: 68px; border-radius: 50%;
+      object-fit: cover; object-position: center 20%;
+      border: 2px solid var(--gold);
+    }
+    .reason-person .rp-name { font-size: 16px; font-weight: 700; color: var(--white); }
+    .reason-person .rp-role { font-size: 12.5px; color: rgba(255,255,255,0.7); margin-top: 2px; }
+    .reason-card p { font-size: 14.5px; line-height: 2; color: rgba(255,255,255,0.88); }
+    .reason-card ul { list-style: none; margin-top: 14px; }
+    .reason-card li {
+      position: relative; padding: 6px 0 6px 26px;
+      font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.88);
+    }
+    .reason-card li::before {
+      content: "▸"; position: absolute; left: 4px; color: var(--accent-light);
+    }
+    .reason-formula {
+      text-align: center;
+      font-size: clamp(18px, 3vw, 26px);
+      font-weight: 900;
+      margin: 0 0 44px;
+      color: var(--white);
+      line-height: 1.7;
+    }
+    .reason-formula .x { color: var(--gold); margin: 0 10px; }
+
+    /* 料金 */
+    .price-hero {
+      text-align: center;
+      background: var(--white);
+      border: 2px solid var(--navy);
+      border-radius: var(--radius);
+      padding: 40px 30px;
+      margin-bottom: 24px;
+    }
+    .price-hero .price-zero {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1.6;
+    }
+    .price-hero .price-zero .num { color: var(--accent); font-size: 1.35em; }
+    .price-hero p { font-size: 15px; color: var(--text-light); margin-top: 10px; }
+    .price-table { width: 100%; border-collapse: collapse; background: var(--white); box-shadow: var(--shadow); border-radius: var(--radius); overflow: hidden; }
+    .price-table th, .price-table td { padding: 16px 18px; font-size: 15px; text-align: left; border-bottom: 1px solid var(--gray-100); }
+    .price-table th { background: var(--navy); color: var(--white); font-weight: 500; white-space: nowrap; }
+    .price-table td.fee { font-weight: 700; color: var(--navy); white-space: nowrap; }
+    .price-note {
+      font-size: 12.5px; color: var(--text-light); line-height: 1.9;
+      margin-top: 18px; padding-left: 14px; border-left: 2px solid var(--gray-200);
+    }
+    .table-scroll { overflow-x: auto; }
+
+    /* 比較 */
+    .compare-table { width: 100%; border-collapse: collapse; background: var(--white); box-shadow: var(--shadow); border-radius: var(--radius); overflow: hidden; min-width: 640px; }
+    .compare-table th, .compare-table td { padding: 15px 16px; font-size: 14px; border-bottom: 1px solid var(--gray-100); text-align: center; line-height: 1.7; }
+    .compare-table thead th { background: var(--gray-100); color: var(--navy); font-weight: 700; }
+    .compare-table td:first-child, .compare-table th:first-child { text-align: left; font-weight: 500; }
+    .compare-table .col-us { background: rgba(74,144,217,0.08); font-weight: 700; color: var(--navy); }
+    .compare-table thead .col-us { background: var(--accent); color: var(--white); }
+
+    /* 流れ */
+    .flow-list { counter-reset: flow; display: grid; gap: 14px; max-width: 760px; margin: 0 auto; }
+    .flow-item {
+      counter-increment: flow;
+      display: flex; align-items: flex-start; gap: 20px;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px 28px;
+    }
+    .flow-item::before {
+      content: counter(flow, decimal-leading-zero);
+      font-family: 'Inter', sans-serif;
+      font-size: 26px; font-weight: 700; color: var(--accent);
+      line-height: 1.2;
+      min-width: 48px;
+    }
+    .flow-item h3 { font-size: 16.5px; color: var(--navy); margin-bottom: 4px; }
+    .flow-item p { font-size: 14px; color: var(--text-light); line-height: 1.8; }
+    .flow-item .flow-tag {
+      display: inline-block; font-size: 11.5px; font-weight: 700;
+      padding: 2px 10px; border-radius: 999px; margin-left: 8px; vertical-align: middle;
+    }
+    .flow-tag--us { background: var(--navy); color: var(--white); }
+    .flow-tag--you { background: var(--gold); color: var(--navy-dark); }
+
+    /* FAQ */
+    .faq-list { max-width: 780px; margin: 0 auto; }
+    .faq-item {
+      background: var(--white); border-radius: var(--radius);
+      box-shadow: var(--shadow); margin-bottom: 14px; overflow: hidden;
+    }
+    .faq-item summary {
+      cursor: pointer; list-style: none;
+      padding: 20px 24px; font-size: 15.5px; font-weight: 700; color: var(--navy);
+      position: relative; padding-right: 48px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: "+"; position: absolute; right: 22px; top: 50%;
+      transform: translateY(-50%);
+      font-size: 22px; color: var(--accent); font-weight: 400;
+    }
+    .faq-item[open] summary::after { content: "−"; }
+    .faq-item .faq-a { padding: 0 24px 20px; font-size: 14.5px; line-height: 1.9; color: var(--text-light); }
+
+    /* 代表紹介（簡易） */
+    .prof-grid { display: grid; grid-template-columns: 220px 1fr; gap: 36px; align-items: start; max-width: 860px; margin: 0 auto; }
+    .prof-grid img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-lg); }
+    .prof-name { font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .prof-role { font-size: 13.5px; color: var(--accent); font-weight: 600; margin-bottom: 18px; }
+    .prof-bio { font-size: 14.5px; line-height: 2; color: var(--text); margin-bottom: 12px; }
+    .prof-career { margin-top: 18px; }
+    .prof-career li {
+      list-style: none; position: relative;
+      padding: 6px 0 6px 26px; font-size: 14px; color: var(--text); line-height: 1.8;
+    }
+    .prof-career li::before { content: "●"; position: absolute; left: 4px; font-size: 8px; top: 14px; color: var(--accent); }
+
+    /* CTA final */
+    .final-cta { text-align: center; }
+    .final-cta h2 { font-size: clamp(24px, 3.6vw, 34px); font-weight: 900; line-height: 1.6; margin-bottom: 18px; }
+    .final-cta p { font-size: 15.5px; line-height: 2; margin-bottom: 32px; color: rgba(255,255,255,0.85); }
+
+    @media (max-width: 820px) {
+      .worry-grid, .reason-grid { grid-template-columns: 1fr; }
+      .role-grid { grid-template-columns: 1fr; }
+      .prof-grid { grid-template-columns: 1fr; }
+      .prof-grid img { max-width: 240px; }
+      .lp-section { padding: 64px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header（LP用に導線を絞る） -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../assets/img/logo-white.png" alt="Remi Three" class="logo-img">
+      </a>
+      <nav class="nav" style="display:flex;">
+        <a href="#contact" class="nav-link nav-link--cta">無料相談はこちら</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="lp-hero">
+    <div class="lp-hero-inner">
+      <span class="lp-hero-badge"><span class="strong">地方企業専門</span>｜完全成果報酬型 採用代行</span>
+      <h1>採用できるまで、<br>費用は<span class="accent">かかりません。</span></h1>
+      <p class="lp-hero-lead">
+        人手が足りない地方企業に代わって、indeed・求人ボックスでの集客から、<br>
+        書類選考、面接の日程調整まで弊社がすべて実施。<br>
+        <strong>貴社がやるのは、面接だけ。</strong>
+      </p>
+      <p class="lp-note">
+        ※ 応募者集客のための広告費（月1万円〜5万円程度・媒体への実費）のみ貴社にご負担いただきます。採用コンサルティング・採用代行（アウトソーシング）・広告運用の手数料はすべて無料。その他にかかるのは採用成功時の費用のみです。
+      </p>
+      <a href="#contact" class="lp-cta-btn">無料で相談する</a>
+      <p class="lp-cta-sub">オンライン30分 / 売り込みは一切いたしません</p>
+    </div>
+  </section>
+
+  <!-- お悩み -->
+  <section class="lp-section lp-section--gray">
+    <div class="lp-container">
+      <span class="lp-label">PROBLEM</span>
+      <h2 class="lp-h2"><span style="color:var(--accent);">地方企業</span>の、こんなお悩みは<br>ありませんか？</h2>
+      <div class="worry-grid">
+        <div class="worry-card">
+          <div class="worry-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h3>採用に時間を割けない</h3>
+          <p>現場も忙しく、応募者への連絡や日程調整が後回しに。気づいたら応募者と連絡がつかなくなっている。</p>
+        </div>
+        <div class="worry-card">
+          <div class="worry-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M6 12h.01M18 12h.01"/></svg></div>
+          <h3>広告費が掛け捨てになる</h3>
+          <p>求人広告に数十万円払ったのに応募ゼロ。採用できてもできなくても費用だけかかる仕組みに疑問。</p>
+        </div>
+        <div class="worry-card">
+          <div class="worry-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></div>
+          <h3>採用のやり方がわからない</h3>
+          <p>何の媒体を使えばいいのか、求人票をどう書けばいいのか。相談できる相手が社内にいない。</p>
+        </div>
+      </div>
+      <p class="worry-arrow">▼</p>
+      <h2 class="lp-h2" style="margin-top:28px; margin-bottom:0;">地方企業の採用を、<span style="color:var(--accent);">まるごと</span>お任せください。</h2>
+    </div>
+  </section>
+
+  <!-- サービス範囲 -->
+  <section class="lp-section">
+    <div class="lp-container">
+      <span class="lp-label">SERVICE</span>
+      <h2 class="lp-h2">弊社が集客から選考準備まで。<br>貴社は「面接をするだけ」。</h2>
+      <div class="role-grid">
+        <div class="role-card role-card--us">
+          <h3>Remi Threeがやること</h3>
+          <ul>
+            <li>採用戦略・採用要件の設計（採用コンサルティング）</li>
+            <li>求人票の作成・改善</li>
+            <li>indeed・求人ボックス等の広告運用</li>
+            <li>応募者へのスピード対応（一次連絡・追客）</li>
+            <li>書類選考の代行</li>
+            <li>面接の日程調整・リマインド・辞退防止フォロー</li>
+            <li>応募状況の分析レポートを定期提出</li>
+          </ul>
+        </div>
+        <div class="role-card role-card--you">
+          <h3>貴社がやること</h3>
+          <p class="role-big">面接をして、<br>合否を決める。<br>それだけです。</p>
+          <p class="role-note">面接の合否連絡も、ご希望に応じて弊社が代行します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- なぜ実現できるのか -->
+  <section class="lp-section lp-section--navy">
+    <div class="lp-container">
+      <span class="lp-label">WHY</span>
+      <h2 class="lp-h2">なぜ、無料でここまでできるのか。</h2>
+      <p class="reason-formula">地方採用のプロ<span class="x">×</span>AIオペレーション</p>
+      <div class="reason-grid">
+        <div class="reason-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>地方採用のプロが直接支援</h3>
+          <div class="reason-person">
+            <img src="../assets/img/profile-rikuya.jpg" alt="山内 陸也">
+            <div>
+              <p class="rp-name">山内 陸也</p>
+              <p class="rp-role">代表｜マイナビ・Indeed Japan出身</p>
+            </div>
+          </div>
+          <p>代表はマイナビ（仙台・郡山）で東北の採用難エリアを5年、indeed Japanで運用型求人広告のコンサルティングを経験。その後は事業会社の人事として採用チームの立ち上げから拡大まで携わりました。「募集する側」と「採用する側」の両方を知り尽くしているから、地方の採用でも成果を出せます。</p>
+        </div>
+        <div class="reason-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>AIで採用業務を自動化</h3>
+          <p>応募対応・書類選考・日程調整には自社構築のAIオペレーションを活用。人手に頼らないから、低コストで質の高い採用代行を提供できます。</p>
+          <ul>
+            <li>応募後すぐの自動ファーストコンタクト（機会損失ゼロへ）</li>
+            <li>AIによる書類選考の一次スクリーニング</li>
+            <li>日程調整・リマインドの自動メッセージ</li>
+          </ul>
+        </div>
+      </div>
+      <p style="text-align:center; margin-top:40px; font-size:15px; color:rgba(255,255,255,0.85); line-height:2;">
+        だから、<strong style="color:var(--gold);">採用が決まるまで費用をいただかない</strong>サービス設計ができるのです。
+      </p>
+    </div>
+  </section>
+
+  <!-- 料金 -->
+  <section class="lp-section lp-section--gray">
+    <div class="lp-container">
+      <span class="lp-label">PRICE</span>
+      <h2 class="lp-h2">料金プラン</h2>
+      <div class="price-hero">
+        <p class="price-zero">初期費用 <span class="num">0</span>円　／　月額固定費 <span class="num">0</span>円</p>
+        <p>費用が発生するのは、採用が決まったときだけ。</p>
+      </div>
+      <div class="table-scroll">
+        <table class="price-table">
+          <thead>
+            <tr><th>採用職種</th><th>成果報酬（入社1名あたり）</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>軽作業・清掃・販売/接客スタッフ など</td><td class="fee">30万円（税別）</td></tr>
+            <tr><td>ドライバー・製造・介護・事務 など</td><td class="fee">40万円（税別）</td></tr>
+            <tr><td>営業職・看護師・技能職 など</td><td class="fee">50〜60万円（税別）</td></tr>
+            <tr><td>施工管理・専門職・管理職 など</td><td class="fee">70〜80万円（税別）</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="price-note">
+        ※ 応募者集客のための広告費（月1万円〜5万円程度・媒体への実費）のみ貴社にご負担いただきます。採用コンサルティング・採用代行（アウトソーシング）・広告運用の手数料はすべて無料です。<br>
+        ※ 入社後1ヶ月以内にご本人都合で退職された場合、成果報酬の50%を返金いたします。<br>
+        ※ ご請求は入社月の末日締めです。最低契約期間は3ヶ月となります。
+      </p>
+
+      <h2 class="lp-h2" style="margin-top:72px;">他の採用手法との比較<br><span style="font-size:0.6em; font-weight:500; color:var(--text-light);">（年間1名採用する場合の目安）</span></h2>
+      <div class="table-scroll">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>求人広告<br>（掲載課金）</th>
+              <th>定額制の採用代行</th>
+              <th>人材紹介</th>
+              <th class="col-us">Remi Three</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>費用の目安</td>
+              <td>20〜100万円</td>
+              <td>月5〜20万円<br>（年60〜240万円）</td>
+              <td>年収の30〜35%<br>（約100〜130万円）</td>
+              <td class="col-us">成果報酬30万円〜<br>＋広告費実費</td>
+            </tr>
+            <tr>
+              <td>採用できなかった場合</td>
+              <td>費用は全額発生</td>
+              <td>費用は全額発生</td>
+              <td>0円</td>
+              <td class="col-us">広告費実費のみ</td>
+            </tr>
+            <tr>
+              <td>応募対応・選考の代行</td>
+              <td>なし</td>
+              <td>あり</td>
+              <td>なし<br>（紹介のみ）</td>
+              <td class="col-us">あり<br>（面接以外すべて）</td>
+            </tr>
+            <tr>
+              <td>採用コンサルティング</td>
+              <td>なし</td>
+              <td>プランによる</td>
+              <td>なし</td>
+              <td class="col-us">無料で付帯</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="price-note">※ 費用はいずれも一般的な相場に基づく目安です。</p>
+    </div>
+  </section>
+
+  <!-- 流れ -->
+  <section class="lp-section">
+    <div class="lp-container">
+      <span class="lp-label">FLOW</span>
+      <h2 class="lp-h2">ご支援の流れ</h2>
+      <div class="flow-list">
+        <div class="flow-item">
+          <div>
+            <h3>無料相談（オンライン30分）<span class="flow-tag flow-tag--you">貴社</span></h3>
+            <p>採用したい職種・人数・時期をお聞かせください。採用できる見込みとかかる費用の目安をその場でお答えします。</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div>
+            <h3>採用戦略・求人設計<span class="flow-tag flow-tag--us">弊社</span></h3>
+            <p>募集条件の整理、ターゲット設計、求人票の作成まで弊社が行います。貴社は内容の確認だけ。</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div>
+            <h3>掲載開始・広告運用<span class="flow-tag flow-tag--us">弊社</span></h3>
+            <p>indeed・求人ボックス等に掲載し、データを見ながら毎週改善。応募状況はレポートでご報告します。</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div>
+            <h3>応募対応・書類選考・日程調整<span class="flow-tag flow-tag--us">弊社</span></h3>
+            <p>応募が入ったら即時対応。書類選考を経て、面接の日程調整まで完了した状態でお繋ぎします。</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div>
+            <h3>面接・採用決定<span class="flow-tag flow-tag--you">貴社</span></h3>
+            <p>貴社は面接をして合否を決めるだけ。入社が決まった時点で、初めて成果報酬が発生します。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 代表紹介 -->
+  <section class="lp-section lp-section--gray">
+    <div class="lp-container">
+      <span class="lp-label">ABOUT</span>
+      <h2 class="lp-h2">支援するのは、地方採用のプロです。</h2>
+      <div class="prof-grid">
+        <img src="../assets/img/profile-rikuya.jpg" alt="山内 陸也">
+        <div>
+          <p class="prof-name">山内 陸也</p>
+          <p class="prof-role">合同会社Remi Three 代表</p>
+          <p class="prof-bio">
+            マイナビでは仙台・郡山を拠点に、東北の採用難エリアで5年間、数多くの中小企業の中途採用を支援。indeed Japanでは運用型求人広告のコンサルタントとして、広告運用による母集団形成のノウハウを培いました。その後は人材系ベンチャーの人事責任者として、社員数10名から50名超への拡大を採用面から牽引。「支援する側」と「採用する側」の両方を経験しているからこそ、絵に描いた餅ではない、現場で機能する採用支援を提供します。
+          </p>
+          <ul class="prof-career">
+            <li>株式会社マイナビ（仙台・郡山）— 中途採用支援セールス / マネージャー</li>
+            <li>Indeed Japan 株式会社 — 運用型求人広告のコンサルティング</li>
+            <li>人材×ITベンチャー — 人事責任者として採用チームを立ち上げ</li>
+            <li>2024年 合同会社Remi Three 設立</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="lp-section">
+    <div class="lp-container">
+      <span class="lp-label">FAQ</span>
+      <h2 class="lp-h2">よくあるご質問</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>本当に採用できるまで費用はかからないのですか？</summary>
+          <div class="faq-a">はい。弊社の報酬は採用成功時の成果報酬のみです。採用コンサルティング・採用代行・広告運用の手数料は一切いただきません。唯一、応募者を集めるための広告費（月1万円〜5万円程度・媒体への実費）のみ貴社にご負担いただきます。</div>
+        </details>
+        <details class="faq-item">
+          <summary>広告費はいくら必要ですか？</summary>
+          <div class="faq-a">職種やエリアによりますが、月1万円〜5万円程度が目安です。無料相談の際に、貴社の募集職種での必要予算の目安をお伝えします。予算の上限は貴社に決めていただき、弊社が勝手に増額することはありません。</div>
+        </details>
+        <details class="faq-item">
+          <summary>採用できなかった場合はどうなりますか？</summary>
+          <div class="faq-a">成果報酬は一切発生しません。ご負担いただくのは掲載期間中の広告費実費のみです。</div>
+        </details>
+        <details class="faq-item">
+          <summary>採用した人がすぐに辞めてしまったら？</summary>
+          <div class="faq-a">入社後1ヶ月以内にご本人都合で退職された場合は、成果報酬の50%を返金いたします。</div>
+        </details>
+        <details class="faq-item">
+          <summary>どんな職種・エリアに対応していますか？</summary>
+          <div class="faq-a">ドライバー・製造・介護・販売接客・営業職など、現場系の職種を得意としています。エリアは地方全域に対応しており、特に東北エリアは代表が長年支援してきた得意領域です。複数拠点での同時募集にも対応します。</div>
+        </details>
+        <details class="faq-item">
+          <summary>契約期間の縛りはありますか？</summary>
+          <div class="faq-a">最低契約期間は3ヶ月です。求人広告は掲載後の改善で成果が伸びるため、短期間での判断は貴社にとっても機会損失になることから設定させていただいています。</div>
+        </details>
+        <details class="faq-item">
+          <summary>自社で採用担当を置いていなくても大丈夫ですか？</summary>
+          <div class="faq-a">まったく問題ありません。むしろ「採用担当がいない」「社長が片手間でやっている」という企業様にこそご利用いただきたいサービスです。貴社にお願いするのは面接の実施だけです。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA + Form -->
+  <section class="lp-section lp-section--navy" id="contact">
+    <div class="lp-container">
+      <div class="final-cta">
+        <h2>まずは、採用できるかどうか<br>無料でお答えします。</h2>
+        <p>
+          「うちの職種、うちのエリアで採用できるの？」——その疑問に、オンライン30分でお答えします。<br>
+          費用が発生するのは採用が決まったときだけ。相談して損はありません。
+        </p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="contact-lead">
+            フォーム送信後、1営業日以内に<br>
+            担当より日程のご案内をお送りします。<br><br>
+            お急ぎの方はメールでも承ります。
+          </p>
+          <div class="contact-email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:info@remithree.com">info@remithree.com</a>
+          </div>
+        </div>
+        <form class="contact-form" id="rpoForm" action="https://formspree.io/f/xqegrkvy" method="POST">
+          <input type="hidden" name="page" value="成果報酬型採用代行LP">
+          <input type="hidden" name="_subject" value="【成果報酬型採用代行LP】無料相談の申し込み">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="company">会社名 <span class="required">*</span></label>
+              <input type="text" id="company" name="会社名" required>
+            </div>
+            <div class="form-group">
+              <label for="name">お名前 <span class="required">*</span></label>
+              <input type="text" id="name" name="お名前" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">メールアドレス <span class="required">*</span></label>
+              <input type="email" id="email" name="メールアドレス" required>
+            </div>
+            <div class="form-group">
+              <label for="tel">電話番号 <span class="required">*</span></label>
+              <input type="tel" id="tel" name="電話番号" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="area">会社所在地（任意）</label>
+            <input type="text" id="area" name="会社所在地" placeholder="例：宮城県仙台市">
+          </div>
+          <div class="form-group">
+            <label for="jobtype">採用したい職種 <span class="required">*</span></label>
+            <input type="text" id="jobtype" name="採用したい職種" placeholder="例：ドライバー、介護スタッフ、営業職" required>
+          </div>
+          <div class="form-group">
+            <label>職種未経験の方の採用 <span class="required">*</span></label>
+            <div class="checkbox-group">
+              <label class="checkbox"><input type="radio" name="未経験可否" value="未経験でも可" required> 未経験でも可</label>
+              <label class="checkbox"><input type="radio" name="未経験可否" value="経験者のみ"> 経験者のみ</label>
+              <label class="checkbox"><input type="radio" name="未経験可否" value="職種による・相談したい"> 職種による・相談したい</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>現在の採用手法（複数選択可） <span class="required">*</span></label>
+            <div class="checkbox-group" id="grpMethod">
+              <label class="checkbox"><input type="checkbox" name="現在の採用手法" value="ハローワーク"> ハローワーク</label>
+              <label class="checkbox"><input type="checkbox" name="現在の採用手法" value="求人広告（掲載型）"> 求人広告（掲載型）</label>
+              <label class="checkbox"><input type="checkbox" name="現在の採用手法" value="indeed等の運用型広告"> indeed等の運用型広告</label>
+              <label class="checkbox"><input type="checkbox" name="現在の採用手法" value="人材紹介"> 人材紹介</label>
+              <label class="checkbox"><input type="checkbox" name="現在の採用手法" value="自社HP・SNS"> 自社HP・SNS</label>
+              <label class="checkbox"><input type="checkbox" name="現在の採用手法" value="縁故・リファラル"> 縁故・リファラル</label>
+              <label class="checkbox"><input type="checkbox" name="現在の採用手法" value="特に行っていない"> 特に行っていない</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>お問い合わせ理由（複数選択可） <span class="required">*</span></label>
+            <div class="checkbox-group" id="grpReason">
+              <label class="checkbox"><input type="checkbox" name="お問い合わせ理由" value="今の採用費用よりも抑えたい"> 今の採用費用よりも抑えたい</label>
+              <label class="checkbox"><input type="checkbox" name="お問い合わせ理由" value="採用できなくて困っている"> 採用できなくて困っている</label>
+              <label class="checkbox"><input type="checkbox" name="お問い合わせ理由" value="人手が不足している"> 人手が不足している</label>
+              <label class="checkbox"><input type="checkbox" name="お問い合わせ理由" value="採用の知見がない"> 採用の知見がない</label>
+              <label class="checkbox"><input type="checkbox" name="お問い合わせ理由" value="その他"> その他</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">ご相談内容（任意）</label>
+            <textarea id="message" name="ご相談内容" rows="4" placeholder="例：仙台市で介護スタッフを2名採用したい"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="checkbox"><input type="checkbox" name="プライバシーポリシー" value="同意する" required> <a href="../privacy.html" target="_blank" style="color:var(--accent-light);">プライバシーポリシー</a>に同意する <span class="required">*</span></label>
+          </div>
+          <button type="submit" class="form-btn">無料相談を申し込む</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <img src="../assets/img/logo-white.png" alt="Remi Three" class="footer-logo">
+        <nav class="footer-nav">
+          <a href="../index.html">HOME</a>
+          <a href="../company.html">COMPANY</a>
+          <a href="../about.html">ABOUT US</a>
+          <a href="../service.html">SERVICE</a>
+          <a href="../contact.html">CONTACT</a>
+          <a href="../privacy.html">プライバシーポリシー</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Remi Three .LLC. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const el = document.querySelector(a.getAttribute('href'));
+        if (el) {
+          const offset = document.querySelector('.header').offsetHeight;
+          window.scrollTo({ top: el.offsetTop - offset, behavior: 'smooth' });
+        }
+      });
+    });
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
+    });
+    // フォーム：チェックボックス群の必須バリデーション
+    document.getElementById('rpoForm').addEventListener('submit', e => {
+      const groups = [
+        { id: 'grpMethod', label: '現在の採用手法' },
+        { id: 'grpReason', label: 'お問い合わせ理由' },
+      ];
+      for (const g of groups) {
+        const checked = document.querySelectorAll(`#${g.id} input:checked`).length;
+        if (checked === 0) {
+          e.preventDefault();
+          alert(`「${g.label}」を1つ以上選択してください。`);
+          document.getElementById(g.id).scrollIntoView({ behavior: 'smooth', block: 'center' });
+          return;
+        }
+      }
+    });
+    // Scroll animation
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.worry-card, .role-card, .reason-card, .flow-item, .prof-grid, .faq-item, .price-hero').forEach(el => {
+      el.classList.add('fade-up');
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
