@@ -1180,6 +1180,132 @@ em.hl {
 .deck-banner:hover .deck-btn { background: var(--white); }
 .deck-banner:hover .deck-btn::after { transform: translateX(6px); }
 
+/* 自作スライドビューア（会社紹介資料） */
+.deck-viewer { max-width: 860px; margin-top: 64px; }
+
+.dv-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.dv-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.dv-label::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: var(--yellow);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.dv-open {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-bottom: 2px solid var(--yellow);
+  padding-bottom: 3px;
+  white-space: nowrap;
+}
+
+.dv-open:hover { opacity: 0.6; }
+
+.dv-stage {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--ink);
+  background: var(--ink-deep);
+  overflow: hidden;
+  user-select: none;
+}
+
+.dv-stage img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.dv-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  background: rgba(20, 25, 46, 0.88);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  font-family: var(--en);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--tr);
+}
+
+.dv-prev { left: 0; }
+.dv-next { right: 0; }
+
+.dv-arrow:hover {
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+.dv-progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: rgba(20, 25, 46, 0.15);
+}
+
+.dv-progress span {
+  display: block;
+  height: 100%;
+  background: var(--yellow);
+  transition: width var(--tr);
+}
+
+.dv-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border: 1px solid var(--ink);
+  border-top: none;
+  background: var(--white);
+  padding: 11px 18px;
+}
+
+.dv-count {
+  font-family: var(--en);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+}
+
+.dv-hint {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 768px) {
+  .deck-viewer { margin-top: 44px; }
+  .dv-arrow { width: 38px; height: 38px; font-size: 15px; }
+  .dv-hint { display: none; }
+}
+
 .deck-link {
   display: inline-flex;
   align-items: center;

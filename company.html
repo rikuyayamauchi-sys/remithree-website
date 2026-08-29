@@ -11,7 +11,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
   <meta name="theme-color" content="#F6F4EE">
-  <link rel="stylesheet" href="assets/style.css?v=20260829b">
+  <link rel="stylesheet" href="assets/style.css?v=20260829c">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
@@ -79,14 +79,22 @@
           <div class="company-val">採用支援事業（成果報酬型 採用代行「キマルマデ」）/ キャリア支援事業 / 楽曲制作</div>
         </div>
       </div>
-      <a href="intro.html" class="deck-banner reveal">
-        <div>
-          <p class="deck-en">COMPANY DECK</p>
-          <p class="deck-title">会社紹介資料</p>
-          <p class="deck-desc">事業内容・実績・強みをまとめた会社説明資料をブラウザでご覧いただけます。</p>
+      <div class="deck-viewer reveal" id="deck">
+        <div class="dv-head">
+          <h3 class="dv-label">会社紹介資料</h3>
+          <a href="intro.html" class="dv-open">全画面で見る &rarr;</a>
         </div>
-        <span class="deck-btn">資料を見る</span>
-      </a>
+        <div class="dv-stage">
+          <img id="dvImg" src="assets/img/deck/slide-01.webp" alt="合同会社Remi Three 会社紹介資料">
+          <button class="dv-arrow dv-prev" aria-label="前のスライドへ">&larr;</button>
+          <button class="dv-arrow dv-next" aria-label="次のスライドへ">&rarr;</button>
+          <div class="dv-progress"><span id="dvProg"></span></div>
+        </div>
+        <div class="dv-bar">
+          <span class="dv-count"><span id="dvNow">1</span> / 14</span>
+          <span class="dv-hint">矢印ボタン・キーボードの←→・スワイプでめくれます</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -130,6 +138,38 @@
       });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // 会社紹介資料スライドビューア
+    (() => {
+      const TOTAL = 14;
+      let i = 1;
+      const img = document.getElementById('dvImg');
+      const now = document.getElementById('dvNow');
+      const prog = document.getElementById('dvProg');
+      const src = n => `assets/img/deck/slide-${String(n).padStart(2, '0')}.webp`;
+      function show(n) {
+        i = ((n - 1 + TOTAL) % TOTAL) + 1;
+        img.src = src(i);
+        now.textContent = i;
+        prog.style.width = (i / TOTAL * 100) + '%';
+        new Image().src = src(i % TOTAL + 1); // 次ページを先読み
+      }
+      document.querySelector('.dv-prev').addEventListener('click', () => show(i - 1));
+      document.querySelector('.dv-next').addEventListener('click', () => show(i + 1));
+      document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight') show(i + 1);
+        if (e.key === 'ArrowLeft') show(i - 1);
+      });
+      let sx = null;
+      img.addEventListener('touchstart', e => { sx = e.touches[0].clientX; }, { passive: true });
+      img.addEventListener('touchend', e => {
+        if (sx === null) return;
+        const dx = e.changedTouches[0].clientX - sx;
+        if (Math.abs(dx) > 40) show(i + (dx < 0 ? 1 : -1));
+        sx = null;
+      }, { passive: true });
+      show(1);
+    })();
   </script>
 </body>
 </html>
