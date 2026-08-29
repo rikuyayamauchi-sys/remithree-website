@@ -927,7 +927,8 @@
     window.addEventListener('scroll', onScroll);
     onScroll();
 
-    // フォーム：チェックボックス群の必須バリデーション
+    // フォーム：チェックボックス群の必須バリデーション → キマルマデCRMへ送信
+    const CRM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzAFmuz0uGpgnXt8n1IDd0PZKHYAoX6R3onaXEBDVzo-oIRT6gjqrBhtFfCPZrz1mj0/exec';
     document.getElementById('rpoForm').addEventListener('submit', e => {
       const groups = [
         { id: 'grpMethod', label: '現在の採用手法' },
@@ -942,6 +943,18 @@
           return;
         }
       }
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('.form-btn');
+      btn.disabled = true;
+      btn.textContent = '送信中…';
+      fetch(CRM_ENDPOINT, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(form)) })
+        .then(() => {
+          form.innerHTML = '<p style="font-size:16px; font-weight:700; line-height:2.2; padding:28px 4px;">送信ありがとうございました。<br>内容を確認のうえ、1営業日以内に日程のご案内をお送りします。</p>';
+        })
+        .catch(() => {
+          form.submit(); // 通信失敗時はFormspreeへフォールバック
+        });
     });
 
     // Scroll reveal
