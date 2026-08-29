@@ -121,6 +121,11 @@
 
   /* 3カラムカード */
   .card-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; flex: 1; align-content: start; }
+  .card-row--2x2 { grid-template-columns: 1fr 1fr; gap: 18px; }
+  .card-row--2x2 .f-card { padding: 24px 28px; display: flex; gap: 20px; align-items: flex-start; }
+  .card-row--2x2 .f-ico { margin-bottom: 0; flex-shrink: 0; width: 44px; height: 44px; }
+  .card-row--2x2 .f-card h3 { font-size: 17.5px; margin-bottom: 8px; }
+  .card-row--2x2 .f-card p { font-size: 12.5px; line-height: 1.85; }
   .f-card {
     position: relative;
     background: var(--white);
@@ -357,21 +362,34 @@
       <h2>事業内容</h2>
       <span class="s-ghost">SERVICES</span>
     </div>
-    <div class="card-row">
+    <div class="card-row card-row--2x2">
+      <div class="f-card">
+        <div class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+        <div>
+          <h3>成果報酬型 採用代行「キマルマデ」</h3>
+          <p>地方企業専門の完全成果報酬型 採用代行。採用が決まるまで費用0円。集客から書類選考・日程調整まで一気通貫で代行します。</p>
+        </div>
+      </div>
       <div class="f-card">
         <div class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h3>採用コンサルティング</h3>
-        <p>採用戦略の設計から、母集団形成、オペレーション構築、実務の実行支援（RPO）まで、一気通貫で企業の採用力を底上げします。</p>
+        <div>
+          <h3>採用コンサルティング</h3>
+          <p>採用戦略の設計から、母集団形成、オペレーション構築、実務の実行支援（RPO）まで、一気通貫で企業の採用力を底上げします。</p>
+        </div>
       </div>
       <div class="f-card">
         <div class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="5"/><rect x="3" y="16" width="6" height="5"/><rect x="15" y="16" width="6" height="5"/><path d="M12 8v4M6 16v-2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/></svg></div>
-        <h3>人事コンサルティング</h3>
-        <p>従業員のES（満足度）向上施策の考案・実行や、企業ステージに応じた人事評価制度の設計・運用・ブラッシュアップを担います。</p>
+        <div>
+          <h3>人事コンサルティング</h3>
+          <p>従業員のES（満足度）向上施策の考案・実行や、企業ステージに応じた人事評価制度の設計・運用・ブラッシュアップを担います。</p>
+        </div>
       </div>
       <div class="f-card">
         <div class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
-        <h3>営業・組織構築支援</h3>
-        <p>人材紹介事業をはじめとする新規事業の立ち上げ、営業戦略・CS（カスタマーサクセス）戦略の立案から体制構築まで支援します。</p>
+        <div>
+          <h3>営業・組織構築支援</h3>
+          <p>人材紹介事業をはじめとする新規事業の立ち上げ、営業戦略・CS（カスタマーサクセス）戦略の立案から体制構築まで支援します。</p>
+        </div>
       </div>
     </div>
   </div>
