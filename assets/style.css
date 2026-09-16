@@ -576,23 +576,23 @@ em.hl {
 }
 
 .km-logo-main {
-  height: 64px;
+  height: 72px;
   width: auto;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
 }
 
 .km-lead {
-  font-size: 17.5px;
+  font-size: 19px;
   font-weight: 700;
   line-height: 1.9;
   letter-spacing: 0.03em;
 }
 
 .km-feature .km-desc {
-  font-size: 14.5px;
-  color: rgba(255, 255, 255, 0.82);
-  line-height: 2.1;
-  max-width: 880px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 2.15;
+  max-width: 920px;
 }
 
 .km-feature ul {
@@ -605,9 +605,9 @@ em.hl {
 
 .km-feature ul li {
   position: relative;
-  padding-left: 24px;
-  font-size: 13.5px;
-  line-height: 1.9;
+  padding-left: 26px;
+  font-size: 15px;
+  line-height: 1.95;
   color: rgba(255, 255, 255, 0.92);
 }
 
@@ -724,6 +724,79 @@ em.hl {
   top: 18px;
   width: 8px;
   height: 8px;
+  background: var(--yellow);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+/* キャリア支援 フィーチャーパネル（ライト版・キマルマデと対の大型カード） */
+.svc-feature {
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--ink);
+  padding: 52px 56px 48px;
+  margin-top: 28px;
+  overflow: hidden;
+}
+
+.svc-feature::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 96px;
+  height: 96px;
+  background: var(--yellow);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.svc-feature-num {
+  font-family: var(--en);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--brand);
+  margin-bottom: 22px;
+}
+
+.svc-feature-title {
+  font-size: clamp(24px, 2.6vw, 30px);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.svc-feature-desc {
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 2.15;
+  max-width: 920px;
+}
+
+.svc-feature-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 40px;
+  list-style: none;
+  margin-top: 28px;
+}
+
+.svc-feature-list li {
+  position: relative;
+  padding: 13px 0 13px 28px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.9;
+  border-bottom: 1px solid var(--line);
+}
+
+.svc-feature-list li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 22px;
+  width: 9px;
+  height: 9px;
   background: var(--yellow);
   clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
@@ -1552,6 +1625,12 @@ em.hl {
   .sec-ghost { display: none; }
 
   .km-block { margin-bottom: 48px; }
+  .svc-feature { padding: 34px 26px 30px; margin-top: 20px; }
+  .svc-feature::before { width: 64px; height: 64px; }
+  .svc-feature-title { font-size: 21px; }
+  .svc-feature-desc { font-size: 14px; }
+  .svc-feature-list { grid-template-columns: 1fr; margin-top: 20px; }
+  .svc-feature-list li { font-size: 14px; }
   .km-feature { padding: 32px 26px; }
   .km-feature ul { grid-template-columns: 1fr; }
   .km-topline { margin-bottom: 20px; gap: 12px 18px; }
