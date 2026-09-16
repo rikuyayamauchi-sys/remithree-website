@@ -733,8 +733,7 @@ em.hl {
   position: relative;
   background: var(--white);
   border: 1px solid var(--ink);
-  padding: 52px 56px 48px;
-  margin-top: 28px;
+  padding: 46px 52px 44px;
   overflow: hidden;
 }
 
