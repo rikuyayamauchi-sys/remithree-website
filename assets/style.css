@@ -531,12 +531,12 @@ em.hl {
 
 .km-intro { margin-bottom: 32px; }
 
-.km-topline {
+.km-meta-row {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 20px;
   flex-wrap: wrap;
-  margin-bottom: 28px;
+  margin-bottom: 18px;
 }
 
 .km-num {
@@ -561,18 +561,31 @@ em.hl {
 .km-cat {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  gap: 16px;
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  margin-bottom: 26px;
 }
 
 .km-cat::before {
   content: '';
-  width: 10px;
-  height: 10px;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
   background: var(--yellow);
   clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.km-cat-sub {
+  font-size: 0.5em;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  margin-left: 4px;
+  align-self: flex-end;
+  padding-bottom: 0.35em;
 }
 
 .km-logo-main {
@@ -1632,7 +1645,9 @@ em.hl {
   .svc-feature-list li { font-size: 14px; }
   .km-feature { padding: 32px 26px; }
   .km-feature ul { grid-template-columns: 1fr; }
-  .km-topline { margin-bottom: 20px; gap: 12px 18px; }
+  .km-meta-row { margin-bottom: 12px; gap: 10px 16px; }
+  .km-cat { font-size: 23px; gap: 10px; margin-bottom: 18px; }
+  .km-cat::before { width: 12px; height: 12px; }
   .km-logo-main { height: 46px; }
   .km-lead { font-size: 15px; }
   .km-feature::before { width: 72px; height: 72px; }
