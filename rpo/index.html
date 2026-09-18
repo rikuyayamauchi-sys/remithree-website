@@ -833,6 +833,10 @@
         <form class="contact-form" id="rpoForm" action="https://formspree.io/f/xqegrkvy" method="POST">
           <input type="hidden" name="page" value="成果報酬型採用代行LP">
           <input type="hidden" name="_subject" value="【成果報酬型採用代行LP】無料相談の申し込み">
+          <input type="hidden" name="ts" id="rpoTs" value="">
+          <!-- ハニーポット（人間には見えない。入力があればボット判定） -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true"
+                 style="position:absolute; left:-5000px; width:1px; height:1px; opacity:0;">
           <div class="form-row">
             <div class="form-group">
               <label for="company">会社名 <span class="required">*</span></label>
@@ -945,6 +949,7 @@
 
     // フォーム：チェックボックス群の必須バリデーション → キマルマデCRMへ送信
     const CRM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzAFmuz0uGpgnXt8n1IDd0PZKHYAoX6R3onaXEBDVzo-oIRT6gjqrBhtFfCPZrz1mj0/exec';
+    const PAGE_LOADED_AT = Date.now(); // ボット対策: フォーム表示時刻（送信速度チェックとGAS側tsに使用）
     document.getElementById('rpoForm').addEventListener('submit', e => {
       const groups = [
         { id: 'grpMethod', label: '現在の採用手法' },
@@ -961,6 +966,14 @@
       }
       e.preventDefault();
       const form = e.target;
+      // ボット対策: ハニーポット入力あり／表示から5秒未満の送信は、成功を装って何も送らない
+      const gotcha = form.querySelector('input[name="_gotcha"]');
+      const tooFast = Date.now() - PAGE_LOADED_AT < 5000;
+      if ((gotcha && gotcha.value.trim() !== '') || tooFast) {
+        form.innerHTML = '<p style="font-size:16px; font-weight:700; line-height:2.2; padding:28px 4px;">送信ありがとうございました。<br>内容を確認のうえ、1営業日以内に日程のご案内をお送りします。</p>';
+        return;
+      }
+      document.getElementById('rpoTs').value = PAGE_LOADED_AT;
       const btn = form.querySelector('.form-btn');
       btn.disabled = true;
       btn.textContent = '送信中…';
