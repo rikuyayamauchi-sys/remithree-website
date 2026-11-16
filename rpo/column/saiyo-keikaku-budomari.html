@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>採用計画の作り方と歩留まりの測り方｜週ごとに数字を追う計画表の例 | キマルマデ</title>
+<meta name="description" content="採用計画の作り方を地方の中小企業向けに解説します。応募から入社までの歩留まり（通過率）の測り方、入社目標から週ごとの応募数を逆算する方法、毎週15分の確認手順、数字が足りない時の見直し方を、計画表の例つきでご紹介します。">
+<link rel="canonical" href="https://remithree.com/rpo/column/saiyo-keikaku-budomari.html">
+<meta property="og:type" content="article"><meta property="og:title" content="採用計画の作り方と歩留まりの測り方｜週ごとに数字を追う計画表の例"><meta property="og:description" content="採用計画の作り方を地方の中小企業向けに解説します。応募から入社までの歩留まり（通過率）の測り方、入社目標から週ごとの応募数を逆算する方法、毎週15分の確認手順、数字が足りない時の見直し方を、計画表の例つきでご紹介します。">
+<meta property="og:url" content="https://remithree.com/rpo/column/saiyo-keikaku-budomari.html"><meta property="og:image" content="https://remithree.com/assets/img/hero.jpg"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon-32.png">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F6F4EE;--white:#fff;--ink:#14192E;--ink-deep:#0E1226;--brand:#28327C;--yellow:#FFDE14;--muted:#5A6076;--line:#DCD8CC;--en:'Space Grotesk',sans-serif;--jp:'Noto Sans JP',sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--jp);line-height:1.95;font-size:16.5px}
+a{color:var(--brand)}
+.hd{display:flex;justify-content:space-between;align-items:center;padding:16px 5vw;border-bottom:1px solid var(--line);background:var(--paper)}
+.hd img{height:30px;display:block}.hd .cta{background:var(--ink);color:#fff;text-decoration:none;padding:10px 18px;border-radius:2px;font-weight:700;font-size:14px}
+.hd .cta:hover{background:var(--yellow);color:var(--ink)}
+.wrap{max-width:780px;margin:0 auto;padding:40px 22px 80px}
+.meta{font-family:var(--en);letter-spacing:.2em;color:var(--brand);font-size:12px;border-top:1px solid var(--line);padding-top:14px}
+h1{font-weight:900;font-size:clamp(24px,4.4vw,34px);line-height:1.45;margin:10px 0 18px}
+h2{font-weight:900;font-size:clamp(20px,3.4vw,25px);line-height:1.5;margin:56px 0 16px;padding-top:18px;border-top:1px solid var(--ink)}
+h3{font-weight:700;font-size:18.5px;margin:32px 0 8px;padding-left:18px;position:relative}
+h3::before{content:'';position:absolute;left:0;top:.55em;width:10px;height:12px;background:var(--yellow);clip-path:polygon(0 0,100% 50%,0 100%)}
+ul{list-style:none;padding-left:0}ul li{padding-left:20px;position:relative;margin:6px 0}
+ul li::before{content:'';position:absolute;left:2px;top:.62em;width:9px;height:10px;background:var(--yellow);clip-path:polygon(0 0,100% 50%,0 100%)}
+ol{padding-left:1.4em}ol li{margin:6px 0}
+strong{background:linear-gradient(transparent 64%,var(--yellow) 64%,var(--yellow) 94%,transparent 94%)}
+.tbl{overflow-x:auto;margin:18px 0}table{border-collapse:collapse;width:100%;font-size:15px;background:#fff}
+th{background:var(--ink);color:#fff;text-align:left}th,td{border:1px solid var(--line);padding:9px 12px;vertical-align:top}
+blockquote{margin:18px 0;padding:14px 18px;background:#fff;border-left:3px solid var(--yellow)}
+.lead{font-size:17px}
+.toc{background:#fff;border:1px solid var(--line);padding:18px 22px;margin:28px 0;position:relative}
+.toc::before{content:'';position:absolute;top:0;right:0;width:32px;height:32px;background:var(--yellow);clip-path:polygon(100% 0,0 0,100% 100%)}
+.toc b{font-family:var(--en);letter-spacing:.2em;font-size:12px;color:var(--brand)}.toc ol{margin:8px 0 0}.toc a{color:var(--ink);text-decoration:none}
+.cta-box{background:var(--ink-deep);color:#fff;padding:34px 30px;margin:60px 0 0;position:relative}
+.cta-box::before{content:'';position:absolute;top:0;right:0;width:44px;height:44px;background:var(--yellow);clip-path:polygon(100% 0,0 0,100% 100%)}
+.cta-box p.k{font-family:var(--en);letter-spacing:.2em;color:var(--yellow);font-size:12px;margin:0}
+.cta-box h2{border:0;margin:6px 0 12px;padding:0;color:#fff}.cta-box a.btn{display:inline-block;background:var(--yellow);color:var(--ink);text-decoration:none;font-weight:700;padding:13px 26px;border-radius:2px;margin-top:10px}
+.cta-box a.btn:hover{background:#fff}
+.list a.card{display:block;background:#fff;border:1px solid var(--line);padding:20px 22px;margin:14px 0;text-decoration:none;color:var(--ink)}
+.list a.card:hover{border-color:var(--ink)}.list .d{font-family:var(--en);font-size:12px;color:var(--muted)}.list h2{border:0;margin:4px 0;padding:0;font-size:19px}.list p{margin:4px 0 0;font-size:14.5px;color:var(--muted)}
+.ft{background:var(--ink-deep);color:rgba(255,255,255,.7);padding:28px 5vw;font-size:13px}.ft a{color:#fff;margin-right:18px}
+</style>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "採用計画の作り方と歩留まりの測り方｜週ごとに数字を追う計画表の例", "description": "採用計画の作り方を地方の中小企業向けに解説します。応募から入社までの歩留まり（通過率）の測り方、入社目標から週ごとの応募数を逆算する方法、毎週15分の確認手順、数字が足りない時の見直し方を、計画表の例つきでご紹介します。", "datePublished": "2026-11-16", "dateModified": "2026-11-16", "mainEntityOfPage": "https://remithree.com/rpo/column/saiyo-keikaku-budomari.html", "image": "https://remithree.com/assets/img/hero.jpg", "author": {"@type": "Organization", "name": "合同会社Remi Three", "url": "https://remithree.com/"}, "publisher": {"@type": "Organization", "name": "合同会社Remi Three", "logo": {"@type": "ImageObject", "url": "https://remithree.com/assets/img/logo.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "キマルマデ", "item": "https://remithree.com/rpo/"}, {"@type": "ListItem", "position": 2, "name": "採用コラム", "item": "https://remithree.com/rpo/column/"}, {"@type": "ListItem", "position": 3, "name": "採用計画の作り方と歩留まりの測り方｜週ごとに数字を追う計画表の例", "item": "https://remithree.com/rpo/column/saiyo-keikaku-budomari.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "過去の採用記録がほとんどありません。通過率はどう決めればいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "今日から応募者の一覧を付け始め、3か月分たまったら仮の通過率を出してください。それまでは「応募10件で1人入社」のような仮の目安で計画し、実績が出たら置き換えます。仮の数字であることを表に書いておくと、見直しの時に迷いません。"}}, {"@type": "Question", "name": "年に1〜2人しか採用しない小さな会社でも、計画表は必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "必要です。採用人数が少ないほど、1件の応募や1人の辞退の重みが大きくなります。人数が少ない会社は、通過率を1年分まとめて計算し、毎週は「累計の応募数が目標に届いているか」だけ見る形でも十分に役立ちます。"}}, {"@type": "Question", "name": "通過率は、ハローワークと求人サイトで分けて数えるべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "できれば分けてください。応募者の一覧に「どこから来たか」の欄を作るだけで、あとから入口ごとの通過率が出せます。応募は多いのに面接に来ない入口などが分かり、広告費をどこに使うか決めやすくなります。"}}, {"@type": "Question", "name": "週の目標に届かない週が続いたら、目標を下げてもいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "下げる前に、実績の通過率で計算し直してください。届かない理由が応募数なのか、面接や承諾の段階なのかで、打つ手が変わります。それでも届かない場合は、入社時期をずらすか、確実な目標と背伸びの目標に分けて経営と相談します。"}}]}]</script>
+</head>
+<body>
+<header class="hd"><a href="/rpo/"><img src="/assets/img/kimarumade-logo.png" alt="キマルマデ"></a><a class="cta" href="/rpo/#contact">無料で相談する</a></header>
+<main class="wrap"><p class="meta"><a href="/rpo/column/" style="color:inherit;text-decoration:none">COLUMN</a> ／ 2026.11.16</p><h1>採用計画の作り方と歩留まりの測り方｜週ごとに数字を追う計画表の例</h1><div class="lead"><p>採用計画を作っても続かない、こんなお悩みはありませんか？</p>
+<ul>
+<li>専任の採用担当がおらず、応募や面接の数を誰も数えていない</li>
+<li>「春までに2人」と決めたのに、年明けに足りないと気づく</li>
+<li>求人にお金をかけても、どこで人が抜けているのか分からない</li>
+</ul>
+<p>地方は仕事を探している人がそもそも少なく、採用できる時期も限られます。遅れに気づいた時には取り戻しにくいのです。そんなときに検討したいのが、歩留まり（各段階の通過率）を使った採用計画の作り方です。この記事では、計画表の作り方と、週ごとの数字の追い方・見直し方が分かります。</p></div><nav class="toc"><b>CONTENTS</b><ol><li><a href="#h1">採用計画表とは？「目標」「通過率」「毎週の実績」を1枚に並べた表です</a></li><li><a href="#h2">計画表にはどんな欄を作ればいい？3枚のシートで足ります</a></li><li><a href="#h3">歩留まり（通過率）はどう測る？過去1年の人数を数えて割ります</a></li><li><a href="#h4">入社目標から逆算すると、週に何件の応募が必要？</a></li><li><a href="#h5">週ごとの数字はどう追う？毎週月曜15分の確認手順</a></li><li><a href="#h6">数字が足りないとき、どこから見直す？</a></li><li><a href="#h7">見直しで求人原稿を直すとき、法律で気をつけることは？</a></li><li><a href="#h8">計画表を回す時間がないときは、どうすればいい？</a></li><li><a href="#h9">よくある質問</a></li><li><a href="#h10">まとめ</a></li><li><a href="#h11">参考資料</a></li></ol></nav><h2 id="h1">採用計画表とは？「目標」「通過率」「毎週の実績」を1枚に並べた表です</h2>
+<p>採用計画表は、「いつまでに何人入社してほしいか」を、毎週の行動の数字に直した表です。難しい道具はいりません。Excelや紙のノートで作れます。</p>
+<p>表に書くのは、次の3つだけです。</p>
+<ol>
+<li><strong>目標</strong>：いつまでに、何人入社してほしいか</li>
+<li><strong>通過率</strong>：応募した人のうち、何割が次の段階に進むか（これを「歩留まり」と呼びます）</li>
+<li><strong>毎週の実績</strong>：今週、応募が何件来て、何人と面接したか</li>
+</ol>
+<p>何人採るかを決める前段の考え方（辞める人の補充をどう数えるか、など）は、採用戦略の記事で扱う予定です。この記事では、<strong>決めた目標を週の数字に直し、毎週追いかける方法</strong>に絞ってお伝えします。</p>
+<h3>なぜ地方の中小企業ほど、週ごとに追う必要があるの？</h3>
+<p>人手不足は今も続いています。厚生労働省「一般職業紹介状況（令和8年9月分）」では、有効求人倍率（季節調整値）は1.19倍でした。仕事を探す人1人に対して、求人が1件以上ある状態です。</p>
+<p>この状態では、応募が1件来るだけでも貴重です。1件の連絡の遅れや、1人の辞退が計画全体に響きます。「月末にまとめて振り返る」では、遅れに気づくのが1か月遅れます。週ごとに見れば、1週目の遅れを2週目に取り戻せます。</p>
+<h2 id="h2">計画表にはどんな欄を作ればいい？3枚のシートで足ります</h2>
+<p>専任の担当がいない会社では、表を増やしすぎると続きません。まずは次の3枚で十分です。</p>
+<h3>シート1：応募者の一覧（毎日書く）</h3>
+<p>応募が来たら1行ずつ足します。通過率は、この一覧を数えて出します。</p>
+<div class="tbl"><table><tr><th>欄</th><th>書く内容の例</th></tr><tr><td>応募日</td><td>12/2</td></tr><tr><td>職種</td><td>大型トラック運転手</td></tr><tr><td>どこから来たか</td><td>ハローワーク／求人サイト／知人の紹介</td></tr><tr><td>連絡がついた日</td><td>12/2</td></tr><tr><td>面接日・来たか</td><td>12/5・来た</td></tr><tr><td>結果</td><td>内定／不採用／辞退</td></tr><tr><td>承諾・入社日</td><td>12/12承諾・1/6入社</td></tr><tr><td>メモ</td><td>辞退理由「他社に決まった」</td></tr></table></div>
+<h3>シート2：通過率の表（3か月に1回見直す）</h3>
+<p>段階ごとに「実績の通過率」と「目標の通過率」を並べて書きます。</p>
+<h3>シート3：週ごとの進み具合（毎週書く）</h3>
+<p>週ごとに「目標」と「実績」を並べ、累計でずれを見ます。書き方は後の見出しで例を示します。</p>
+<p><strong>ポイントは、応募者の一覧だけは毎日書くことです。</strong> ほかの2枚は、この一覧を数えれば作れます。</p>
+<h2 id="h3">歩留まり（通過率）はどう測る？過去1年の人数を数えて割ります</h2>
+<p>歩留まりは「次の段階に進んだ人数 ÷ 前の段階の人数」で出します。現場職の採用なら、次の6段階で数えるのがおすすめです。</p>
+<p><strong>応募 → 連絡がついた → 面接に来た → 内定 → 承諾 → 入社</strong></p>
+<p>大手向けの解説では「書類選考通過」が入りますが、地方の現場職では「連絡がついた」「面接に来た」で人が抜けることがよくあります。ここを分けて数えると、直す場所が見えます。</p>
+<h3>計算の例</h3>
+<p>説明のための仮の数字で計算してみます。ある会社の過去1年が次のとおりだったとします。</p>
+<div class="tbl"><table><tr><th>段階</th><th>人数</th><th>通過率</th></tr><tr><td>応募</td><td>40人</td><td>−</td></tr><tr><td>連絡がついた</td><td>30人</td><td>30÷40＝75％</td></tr><tr><td>面接に来た</td><td>18人</td><td>18÷30＝60％</td></tr><tr><td>内定</td><td>8人</td><td>8÷18＝約44％</td></tr><tr><td>承諾</td><td>5人</td><td>5÷8＝約63％</td></tr><tr><td>入社</td><td>4人</td><td>4÷5＝80％</td></tr></table></div>
+<p>応募から入社までの通過率は、4÷40＝10％です。<strong>応募10件で1人入社</strong>が、この会社の目安になります。</p>
+<h3>数えるときの決まりごと</h3>
+<ul>
+<li><strong>同じ人が2回応募したら1件</strong>と数える</li>
+<li>不採用と辞退は分けて書く。辞退は理由もメモする</li>
+<li>人数が少ない会社は、<strong>1年分をまとめて</strong>計算する。1人の差で率が大きく動くためです</li>
+<li>「実績」と「目標」を並べて書く。実績より良い目標の率だけで計算すると、必要な応募数を少なく見積もってしまうことがよくあります</li>
+<li>過去の記録がなければ、今日から一覧を付け始める。3か月たてば、仮の率が出せます</li>
+</ul>
+<h2 id="h4">入社目標から逆算すると、週に何件の応募が必要？</h2>
+<p>通過率が出たら、入社目標から後ろ向きに数えます。</p>
+<p><strong>必要な応募数 ＝ 入社目標 ÷ 応募から入社までの通過率</strong></p>
+<p>先ほどの例で「2人入社」を目標にすると、2÷10％＝<strong>応募20件</strong>です。段階ごとに分けると、次のとおりです。</p>
+<ul>
+<li>入社 2人</li>
+<li>← 承諾 2.5人（2÷80％）</li>
+<li>← 内定 4人（2.5÷約63％）</li>
+<li>← 面接に来た 9人（4÷約44％）</li>
+<li>← 連絡がついた 15人（9÷60％）</li>
+<li>← 応募 20件（15÷75％）</li>
+</ul>
+<h3>「いつまでに集め切るか」を先に決める</h3>
+<p>応募が来ても、入社はすぐではありません。応募から最終面接までに数週間かかり、内定から承諾までにもさらに時間がかかることはよくあります。転職する人は、今の職場を辞める手続きにも時間がかかります。</p>
+<p>そこで、入社日から後ろ向きに区切ります。</p>
+<ol>
+<li>入社日を決める（例：4月1日）</li>
+<li>今の職場を辞める期間を見て、承諾の期限を決める（例：2月末）</li>
+<li>承諾までの期間を引いて、<strong>応募を集め切る期限</strong>を決める（例：1月末）</li>
+<li>今日から期限までの週数で割る（例：8週間なら20件÷8週＝<strong>週2.5件</strong>）</li>
+</ol>
+<h3>季節の波も入れておく</h3>
+<p>応募は、毎年同じような時期に増えたり減ったりすることがよくあります。連休・お盆・年末は落ち込み、年明けや秋口に戻るという会社は少なくありません。年末の週は少なめ、年明けの週は多めに目標を配分しておくと、「年末に足りない」と慌てずに済みます。</p>
+<h2 id="h5">週ごとの数字はどう追う？毎週月曜15分の確認手順</h2>
+<p>シート3は、次のような形で作ります。数字は例です。</p>
+<div class="tbl"><table><tr><th>週</th><th>応募 目標</th><th>応募 実績</th><th>累計 目標</th><th>累計 実績</th><th>面接に来た</th><th>内定</th><th>承諾</th></tr><tr><td>12/1週</td><td>3</td><td>2</td><td>3</td><td>2</td><td>1</td><td>0</td><td>0</td></tr><tr><td>12/8週</td><td>3</td><td>4</td><td>6</td><td>6</td><td>2</td><td>1</td><td>0</td></tr><tr><td>12/15週</td><td>3</td><td>1</td><td>9</td><td>7</td><td>1</td><td>0</td><td>1</td></tr><tr><td>12/22週</td><td>1</td><td>1</td><td>10</td><td>8</td><td>0</td><td>0</td><td>0</td></tr></table></div>
+<h3>毎週月曜にやる5つのこと</h3>
+<ol>
+<li><strong>先週の数を書き込む</strong>（応募者の一覧を数えるだけ）</li>
+<li><strong>累計の目標と実績を比べる</strong>。週ごとの増減より、累計のずれを見ます</li>
+<li><strong>段階ごとの通過率を見る</strong>。どこで人が抜けているかを確かめます</li>
+<li><strong>選考中の人から見込みを出す</strong>。「今いる段階の人数 × そこから入社までの通過率」で足し算します</li>
+<li><strong>今週やることを1つだけ決める</strong>。いくつも同時に変えると、何が効いたか分からなくなります</li>
+</ol>
+<h3>見込みの出し方の例</h3>
+<p>先ほどの通過率で計算すると、面接を終えて結果を待つ人は約22％（内定率約44％×承諾率約63％×入社率80％）、内定を出して返事待ちの人は50％（承諾率約63％×入社率80％）で入社に進みます。</p>
+<ul>
+<li>面接済み・結果待ち 3人 × 約22％ ＝ 約0.7人</li>
+<li>内定・返事待ち 1人 × 50％ ＝ 0.5人</li>
+<li>見込み合計 約1.2人</li>
+</ul>
+<p>目標の2人に対して約0.8人足りない、と分かります。足りない分を応募数に直すと、0.8人÷10％で<strong>あと8件</strong>が必要です。</p>
+<h2 id="h6">数字が足りないとき、どこから見直す？</h2>
+<p>応募が足りないと、多くの会社はまず広告を増やそうとします。ですが、よくあるのは、気づかないうちに内定率や承諾率が下がっていて、承諾1人あたりに必要な応募数が前年より大きく膨らんでいるケースです。このような時は、<strong>応募を増やすより、内定から承諾の手前を直すほうが効く</strong>ことがあります。</p>
+<h3>抜けている段階ごとの見直し方</h3>
+<div class="tbl"><table><tr><th>低い段階</th><th>考えられる原因</th><th>まず試すこと</th></tr><tr><td>応募</td><td>仕事の中身が伝わっていない</td><td>職種名と仕事内容を具体的に書き直す</td></tr><tr><td>連絡がついた</td><td>連絡が遅い、電話だけ</td><td>応募当日に連絡する。SMSやメールも使う</td></tr><tr><td>面接に来た</td><td>面接日が先、場所が分からない</td><td>3日以内の候補日を出す。前日に確認の連絡をする</td></tr><tr><td>内定</td><td>原稿と求める人がずれている</td><td>原稿の「必須の条件」を見直す</td></tr><tr><td>承諾</td><td>返事を待つ間に他社に決まる</td><td>内定から返事までの間に職場見学や連絡を入れる</td></tr><tr><td>入社</td><td>入社日までの間に不安になる</td><td>入社前に初日の流れを伝える</td></tr></table></div>
+<h3>職種名の書き直し例</h3>
+<ul>
+<li>前：「製造スタッフ」</li>
+<li>後：「自動車部品の検査スタッフ（日勤のみ・〇〇市・車通勤可）」</li>
+</ul>
+<p>仕事の場所や時間が一目で分かると、自分に合うか判断しやすくなります。ただし、書くのは<strong>実際の条件だけ</strong>です。</p>
+<h3>目標を「確実な目標」と「背伸びの目標」に分ける</h3>
+<p>経営から「あと1か月で3人」のような目標が来たら、実績の通過率で計算し直します。</p>
+<ul>
+<li>今の実績ペースで届く数字 → <strong>確実な目標</strong></li>
+<li>通過率がいくつも同時に良くならないと届かない数字 → <strong>背伸びの目標</strong>として、週ごとに届きそうかを確かめる</li>
+</ul>
+<p>「承諾率が去年の実績に戻ったら、応募は何件必要か」まで示すと、楽観的すぎる計画を防げます。施策の効果は、季節の波を除くため<strong>前年の同じ時期</strong>と比べてください。</p>
+<h2 id="h7">見直しで求人原稿を直すとき、法律で気をつけることは？</h2>
+<p>応募を増やそうとして、実際より良く見える書き方をしてはいけません。厚生労働省は、職業安定法により、求人広告で<strong>虚偽の表示や誤解を生じさせる表示をしてはならない</strong>と周知しています。</p>
+<h3>原稿を直す前のチェックリスト</h3>
+<ul>
+<li>□ 給与・休日・勤務時間は、実際の条件と同じか</li>
+<li>□ 「残業ほぼなし」など、実態と違う言い切りをしていないか</li>
+<li>□ 募集を終えた求人を出したままにしていないか</li>
+<li>□ 「30歳まで」など年齢で絞っていないか</li>
+<li>□ 「男性向け」「女性歓迎」など性別で絞っていないか</li>
+</ul>
+<p>年齢については、厚生労働省のリーフレットで、募集・採用で<strong>年齢制限を設けることは原則できない</strong>とされています。定年年齢を上限にする場合など、例外に当てはまる時だけ認められます。迷ったら、最寄りのハローワークに相談すると安心です。</p>
+<p>性別についても、男女雇用機会均等法により、募集で性別を限ることは原則できません。「力仕事」と書くより、「20kgほどの荷物を運ぶことがあります」と仕事の中身を書くほうが、正確に伝わります。</p>
+<h2 id="h8">計画表を回す時間がないときは、どうすればいい？</h2>
+<p>兼務で採用をしている会社は、まず<strong>採用に使える時間を「週何時間」で数えて</strong>ください。採用に関わる人の数も、肩書ではなく、実際に動ける量で数えるのがおすすめです。</p>
+<p>たとえば社長や総務の方が週5時間しか使えないなら、応募者への当日中の連絡と面接日程の調整だけで、時間が埋まってしまうこともあります。その場合は、面接は自社で行い、連絡や日程調整などの作業を外に任せるのも1つの方法です。</p>
+<p>地方企業専門の採用代行「キマルマデ」は、求人原稿の作成、Indeed等の運用（Airワーク等）、応募者への連絡、面接日程の調整を代行します。貴社は面接をするだけです。合否はすべて貴社が判断します。AIは作業の効率化に使い、選考の判断には使いません。</p>
+<p>費用は初期費用・月額固定費0円で、採用が決まった時だけ「採用代行費」がかかります（広告費は貴社負担で、媒体への実費です）。費用の考え方は「<a href="https://remithree.com/rpo/column/saiyo-daiko-seikou-houshuu.html">採用代行の成功報酬型とは？地方の現場採用で損しない費用の考え方</a>」で詳しく紹介しています。週ごとの数字を一緒に見ながら進めたい方は、お気軽にご相談ください。</p>
+<h2 id="h9">よくある質問</h2>
+<h3>Q. 過去の採用記録がほとんどありません。通過率はどう決めればいいですか？</h3>
+<p>今日から応募者の一覧を付け始め、3か月分たまったら仮の通過率を出してください。それまでは「応募10件で1人入社」のような仮の目安で計画し、実績が出たら置き換えます。仮の数字であることを表に書いておくと、見直しの時に迷いません。</p>
+<h3>Q. 年に1〜2人しか採用しない小さな会社でも、計画表は必要ですか？</h3>
+<p>必要です。採用人数が少ないほど、1件の応募や1人の辞退の重みが大きくなります。人数が少ない会社は、通過率を1年分まとめて計算し、毎週は「累計の応募数が目標に届いているか」だけ見る形でも十分に役立ちます。</p>
+<h3>Q. 通過率は、ハローワークと求人サイトで分けて数えるべきですか？</h3>
+<p>できれば分けてください。応募者の一覧に「どこから来たか」の欄を作るだけで、あとから入口ごとの通過率が出せます。応募は多いのに面接に来ない入口などが分かり、広告費をどこに使うか決めやすくなります。</p>
+<h3>Q. 週の目標に届かない週が続いたら、目標を下げてもいいですか？</h3>
+<p>下げる前に、実績の通過率で計算し直してください。届かない理由が応募数なのか、面接や承諾の段階なのかで、打つ手が変わります。それでも届かない場合は、入社時期をずらすか、確実な目標と背伸びの目標に分けて経営と相談します。</p>
+<h2 id="h10">まとめ</h2>
+<p>採用計画の作り方は、応募から入社までの歩留まり（通過率）を過去の実績で測り、入社目標から必要な応募数と「集め切る期限」を逆算して、週ごとの数字に直すことです。毎週月曜に累計と通過率を確かめ、抜けている段階を1つずつ直します。原稿を直す時は、実際どおりの条件を書くことを守りましょう。</p>
+<h2 id="h11">参考資料</h2>
+<ul>
+<li><a href="https://www.mhlw.go.jp/stf/newpage_76960.html" target="_blank" rel="noopener">厚生労働省「一般職業紹介状況（令和8年9月分）について」</a></li>
+<li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/haken-shoukai/r0604anteisokukaisei1_00006.html" target="_blank" rel="noopener">厚生労働省「職業安定法に基づく周知｜労働者の募集広告の表示について」</a></li>
+<li><a href="https://www.mhlw.go.jp/file/06-Seisakujouhou-11600000-Shokugyouanteikyoku/0000158624.pdf" target="_blank" rel="noopener">厚生労働省「その募集・採用 年齢にこだわっていませんか？」</a></li>
+</ul><div class="cta-box"><p class="k">KIMARUMADE</p><h2>採用が決まるまで、費用0円。</h2>
+<p>キマルマデは地方企業専門の採用代行です。求人原稿の作成、Indeedなどの運用、応募者への連絡、面接日程の調整まで代行し、貴社は面接をするだけ。初期費用・月額固定費は0円で、採用が決まった時だけ費用がかかります（広告費は実費）。合否はすべて貴社が決めます。</p>
+<a class="btn" href="/rpo/#contact">無料で相談する →</a></div></main><footer class="ft"><a href="/rpo/">キマルマデ</a><a href="/rpo/column/">採用コラム</a><a href="/company.html">運営会社</a><a href="/privacy.html">プライバシーポリシー</a><br>© Remi Three LLC.</footer>
+</body></html>
