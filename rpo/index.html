@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C7DQWPV7B8"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-C7DQWPV7B8');</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>キマルマデ｜地方企業専門の成果報酬型 採用代行 - 採用が決まるまで費用0円 | Remi Three</title>
@@ -1023,6 +1026,7 @@
       btn.textContent = '送信中…';
       fetch(CRM_ENDPOINT, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(form)) })
         .then(() => {
+          try { gtag('event', 'generate_lead', { form: 'rpo_lp', source: (document.getElementById('rpoSrc') || {}).value || '' }); } catch (e) {}
           form.innerHTML = '<p style="font-size:16px; font-weight:700; line-height:2.2; padding:28px 4px;">送信ありがとうございました。<br>内容を確認のうえ、1営業日以内に日程のご案内をお送りします。</p>';
         })
         .catch(() => {
