@@ -849,6 +849,7 @@
           <input type="hidden" name="page" value="成果報酬型採用代行LP">
           <input type="hidden" name="_subject" value="【成果報酬型採用代行LP】無料相談の申し込み">
           <input type="hidden" name="ts" id="rpoTs" value="">
+          <input type="hidden" name="流入元" id="rpoSrc" value="">
           <!-- ハニーポット（人間には見えない。入力があればボット判定） -->
           <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true"
                  style="position:absolute; left:-5000px; width:1px; height:1px; opacity:0;">
@@ -979,6 +980,20 @@
     // フォーム：チェックボックス群の必須バリデーション → キマルマデCRMへ送信
     const CRM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzAFmuz0uGpgnXt8n1IDd0PZKHYAoX6R3onaXEBDVzo-oIRT6gjqrBhtFfCPZrz1mj0/exec';
     const PAGE_LOADED_AT = Date.now(); // ボット対策: フォーム表示時刻（送信速度チェックとGAS側tsに使用）
+    // 流入元の記録（問い合わせがコラム記事・YouTube・検索のどこから来たかを集計するため）。
+    // このタブで最初にLPへ来たときの参照元を保持する（LP内の移動で上書きしない）。
+    (function () {
+      let src = '';
+      try { src = sessionStorage.getItem('km_src') || ''; } catch (e) {}
+      if (!src) {
+        const ref = document.referrer || '';
+        const own = ref.indexOf(location.origin + '/rpo/') === 0 && ref.indexOf('/rpo/column/') === -1;
+        src = (own ? '' : (ref || '直接（ブックマーク・URL入力など）')) + (location.search ? ' ' + location.search : '');
+        try { if (src) sessionStorage.setItem('km_src', src); } catch (e) {}
+      }
+      const el = document.getElementById('rpoSrc');
+      if (el) el.value = (src || '不明').slice(0, 300);
+    })();
     document.getElementById('rpoForm').addEventListener('submit', e => {
       const groups = [
         { id: 'grpMethod', label: '現在の採用手法' },
